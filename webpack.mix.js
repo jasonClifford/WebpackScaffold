@@ -18,10 +18,11 @@ mix.js('src/app.js', './')
         proxy: 'localhost/SynapticFire',
         port: 8000,
         files: [
-            'src/app.scss',
-            'src/app.js'
+            'src/**/*'
+           
 
 
         ]     
     });
+     //'src/app.js'
     //project.dev
