@@ -1,4 +1,13 @@
 {
     "/app.js": "/app.js",
-    "/app.css": "/app.css"
+    "/../Synaptic/app.css": "/../Synaptic/app.css",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/archive.php": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/archive.php",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/footer.php": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/footer.php",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/front-page.php": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/front-page.php",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/functions.php": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/functions.php",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/header.php": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/header.php",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/index.php": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/index.php",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/page.php": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/page.php",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/single.php": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/single.php",
+    "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/style.css": "/D:/MAMP/MAMP/htdocs/SynapticFire/wp-content/themes/Synaptic/style.css"
 }

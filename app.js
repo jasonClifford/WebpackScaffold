@@ -86,21 +86,10 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./src/app.js":
-/*!********************!*\
-  !*** ./src/app.js ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-
-
-/***/ }),
-
-/***/ "./src/app.scss":
-/*!**********************!*\
-  !*** ./src/app.scss ***!
-  \**********************/
+/***/ "./src/css/mainStyle.scss":
+/*!********************************!*\
+  !*** ./src/css/mainStyle.scss ***!
+  \********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -108,15 +97,26 @@
 
 /***/ }),
 
+/***/ "./src/js/appIN.js":
+/*!*************************!*\
+  !*** ./src/js/appIN.js ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ 0:
-/*!*****************************************!*\
-  !*** multi ./src/app.js ./src/app.scss ***!
-  \*****************************************/
+/*!********************************************************!*\
+  !*** multi ./src/js/appIN.js ./src/css/mainStyle.scss ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\Synaptic\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\Synaptic\src\app.scss */"./src/app.scss");
+__webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\appIN.js */"./src/js/appIN.js");
+module.exports = __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\css\mainStyle.scss */"./src/css/mainStyle.scss");
 
 
 /***/ })

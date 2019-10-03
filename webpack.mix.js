@@ -12,8 +12,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('src/app.js', './')
-    .sass('src/app.scss', './')
+mix.js('src/js/appIN.js', './app.js')
+    .sass('src/css/mainStyle.scss', '../Synaptic/app.css')
+    .copy('src/php/*', '../Synaptic')  //copies the php folder contents to the parent dir.
+    //.copy('src/php/*', './')  //copies the php folder contents to the parent dir.
+
     .browserSync({
         proxy: 'localhost/SynapticFire',
         port: 8000,
@@ -24,5 +27,7 @@ mix.js('src/app.js', './')
 
         ]     
     });
-     //'src/app.js'
+    //'src/app.js'
     //project.dev
+    //.copy('src/php/_front-page.php', './front-page.php')  //allows for renaming files
+    //.copy('src/php/_functions.php', './functions.php')
