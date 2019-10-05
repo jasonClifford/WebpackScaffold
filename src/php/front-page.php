@@ -12,7 +12,7 @@
 
 <?php get_header();?>
 
-<!-- <script>alert('asldjfklsdjfskldfk');</script> -->
+
 
 <h1>this is outside of the folder</h1>
 

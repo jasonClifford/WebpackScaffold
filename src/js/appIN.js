@@ -1,1 +1,1 @@
-alert('this is an alert');
+import('bootstrap');
