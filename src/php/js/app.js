@@ -104,7 +104,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-
+alert('this is an alert');
 
 /***/ }),
 
