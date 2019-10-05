@@ -12,12 +12,10 @@
 
 <?php get_header();?>
 
-<script>alert('asldjfklsdjfskldfk');</script>
+<!-- <script>alert('asldjfklsdjfskldfk');</script> -->
 
 <h1>this is outside of the folder</h1>
 
 
 <?php get_footer();?>
     
-</body>
-</html>
