@@ -12,7 +12,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('src/js/appIN.js', './app.js')
+mix.js('src/js/appIN.js', 'src/php/js/app.js')
     .sass('src/css/mainStyle.scss', '../Synaptic/app.css')
     .copyDirectory('src/php/', '../Synaptic')  //copies the php folder contents to the parent dir.
     //.copy('src/php/*', './')  //copies the php folder contents to the parent dir.
