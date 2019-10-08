@@ -1,10 +1,12 @@
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import "Colors";
 
 @import 'header';
 
 
 body{
-    background-color: rgb(112, 10, 160);
+    background-color: $Background_Color;
 }
 h1{
     color: black;

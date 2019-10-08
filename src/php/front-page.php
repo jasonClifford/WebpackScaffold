@@ -14,7 +14,7 @@
 
 
 
-<h1>this is outside of the folder</h1>
+<h1>Roan is a Twit</h1>
 
 
 <?php get_footer();?>
