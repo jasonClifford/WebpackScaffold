@@ -16,7 +16,7 @@ mix.js([
     'src/js/appIN.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/jquery/dist/jquery.min.js']
-    , 'src/php/js/app.js')
+    , 'src/php/app.js')
     .sass('src/css/mainStyle.scss', '../Synaptic/app.css')
     .copyDirectory('src/php/', '../Synaptic')  //copies the php folder contents to the parent dir.
     //.copy('src/php/*', './')  //copies the php folder contents to the parent dir.
