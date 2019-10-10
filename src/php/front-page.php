@@ -13,9 +13,9 @@
 <?php get_header();?>
 
 
-
-<h1>Roan is a Twit</h1>
-
+<button class="btn-default">
+<a href="http://localhost:8000/SynapticFire/wp-admin/customize.php?url=http%3A%2F%2Flocalhost%2FSynapticFire%2F"><h1>this is a button</h1></a>
+</button>
 
 <?php get_footer();?>
     
