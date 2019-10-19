@@ -12,10 +12,33 @@
 
 <?php get_header();?>
 
+    <div class="page">
 
-<button class="btn-default">
+        <div class="sideBarL"></div>
+
+        <div class="pageBdy"></div>
+
+        <div class="sideBarL"></div>
+
+
+
+    </div>
+
+
+  
+
+
+        <!-- <nav class="topbar"></nav>
+
+        <nav class="sidebarL"></nav>
+
+        <nav class="sideBarR"></nav>    -->
+
+
+
+<!-- <button class="btn-default">
 <a href="http://localhost:8000/SynapticFire/wp-admin/customize.php?url=http%3A%2F%2Flocalhost%2FSynapticFire%2F"><h1>this is a button</h1></a>
-</button>
+</button> -->
 
 <?php get_footer();?>
     

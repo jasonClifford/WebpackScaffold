@@ -1,0 +1,52 @@
+
+// .sideBarR{
+//     position: fixed;
+//     right: 0rem;
+//     background-color: $SideBar_Color;
+//     height: 100%;
+//     width: 3rem;
+//     z-index: 20;
+
+// }
+// .sidebarL{
+//     position: fixed;
+//    // right: 0rem;
+//     background-color: $SideBar_Color;
+//     height: 100%;
+//     width: 3rem;
+//     z-index: 20;
+
+// }
+// .sidebarL{
+//     position: fixed;
+//    // right: 0rem;
+//     background-color: $SideBar_Color;
+//     height: 100%;
+//     width: 3rem;
+//     z-index: 20;
+
+// }
+
+.page{
+display: grid;
+width: 100vw;
+grid-template-columns: 3rem auto 3rem;
+background-color: aquamarine;
+
+    .sideBarL{
+
+        grid-column-start: 1;
+        height: 100vh;
+        width: 3rem;
+        background-color: bisque;
+    }
+    .sideBarR{
+
+        grid-column-start: 3;
+        height: 100vh;
+        width: 3rem;
+        background-color: rgb(48, 158, 121);
+    }
+
+
+}
