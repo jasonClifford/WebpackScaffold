@@ -1,0 +1,99 @@
+// checkbox PickBarSlide
+#toggle1{
+    display: none;
+
+}
+#toggle1:checked~#page {
+    grid-template-columns: 20rem auto 5rem;
+    //background-color: rgb(34, 18, 94);  
+}
+#toggle1:checked~#page #sideBarL label[for=toggle1] {
+    //background-color: rgb(34, 18, 94); 
+    left: 18rem;
+    transform: rotate(0deg);
+}
+
+// checkbox PickBarSlide
+
+#picBarSlide{
+   display: none;
+}
+#picBarSlide:checked~#page {
+    grid-template-columns: 5rem auto 20rem;
+    
+}
+#picBarSlide:checked~#page #PicBar label[for=picBarSlide] {
+    right: 18rem;
+   transform: rotate(180deg);
+}
+
+#page{
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    
+    grid-template-columns: 5rem auto 5rem;
+    background-color: aquamarine;
+    transition: 1s grid-template-columns;
+
+
+
+
+
+        #sideBarL{
+            //width: 10rem;
+            //height: 100%;
+            background-color: $SideBar_Color;
+
+            .logo{
+                height: 3rem;
+            }
+
+          
+
+            label[for=toggle1] {
+                position: absolute;
+                cursor: pointer;
+                height: 2rem;
+                width: 2rem;
+                left: 3rem;
+                bottom: 0px;
+                transform: rotate(180deg);
+                
+            }
+
+        
+        }
+        #PicBar{
+            background-color: $SideBar_Color;
+           // width: 3rem;
+           // height: 100%;
+            
+
+            label[for=picBarSlide] {
+                position: absolute;
+                cursor: pointer;
+                height: 2rem;
+                width: 2rem;
+                bottom: 0px;
+                right: 3rem;
+                transform: rotate(0deg);
+                                
+            }
+
+           
+        }
+        #pageBdy{
+          //width: 3rem;
+           // height: 100%;
+            background-color: $Background_Color;
+
+            #topBar{
+                width: 100%;
+                height: 3rem;
+                background-color: $TopBar_Color;
+            }
+        }
+
+
+}

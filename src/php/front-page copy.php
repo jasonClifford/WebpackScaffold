@@ -10,7 +10,12 @@
 </head>
 <body>
 
-<?php get_header();?>               
+<?php get_header();?>
+
+                <!-- the hidden checkbox to make the sidebar open and close -->
+                <input type="checkbox" id="toggle1">
+                <input type="checkbox" id="picBarSlide">
+                
 
     <div id="page">
 
@@ -19,27 +24,15 @@
         <div id="sideBarL">
             <div class="logo">
                 <a href="#">
-                     <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/SF_Logo2.svg"/>
+                     <img src="<?php echo get_template_directory_uri(); ?>/Images/SF_Logo.png"/>
                 </a>
             </div>
+                <!-- the hamburger menu buton -->
+             <label for="toggle1">
+             <img src="<?php echo get_template_directory_uri(); ?>/Images/OpenClose.png"/>
+             </label>
 
-
-            <!-- PROJECT BUTTON -->
-            <div class="projectBtn">
-            <a href="#">
-                     <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/ProjectIcon.svg"/>
-                </a>
-             </div>
-             <!-- PROJECT BUTTON -->
-
-            <!-- SETTINGS BUTTON -->
-            <div class="settingsBtn">
-            <a href="#">
-                     <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/SettingsICN.svg   "/>
-                </a>
-             </div>
-            <!-- SETTINGS BUTTON -->
-           
+            <!-- <h3>Lorem </h3> -->
         </div>
 
         <div id="pageBdy">
@@ -50,6 +43,12 @@
        
 
         <div id="PicBar">
+         <!-- the hamburger menu buton -->
+         <label for="picBarSlide">
+         <img src="<?php echo get_template_directory_uri(); ?>/Images/OpenClose.png"/>
+             </label>
+
+        
         <!-- <h3>Lorem</h3> -->
     
         </div>
