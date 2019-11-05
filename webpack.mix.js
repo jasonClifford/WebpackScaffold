@@ -32,4 +32,3 @@ mix.js([
     });
 
     
-// blah blah blah
