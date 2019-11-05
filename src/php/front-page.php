@@ -10,49 +10,117 @@
 </head>
 <body>
 
-<?php get_header();?>               
+<?php get_header();?>
 
-    <div id="page">
+<div id="page">
+
+<!-- Modal popup window start -->
+    <div id="Project_modal" class="JS_Project_modal">
+
+        <!-- inner Modal Window -->
+        <div class="Project_pop">
+
+            
+
+            <div class="Modal-one">
+            <div class="Project_logo">
+                <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/SF_Logo2.svg"/>
+                <span></span>
+            </div>
+
+
+            </div>
+            <div class="Modal-two"></div>
+
+
+            <div class="Modal-three">
+                <div id="Close_Btn">
+                    <p>Cancel</p>
+                </div>
+
+
+            </div>
+
+
+
+            
+        
+        </div>
+        <!-- End inner Modal Window -->
+    </div>
+<!-- Modal popup window end -->
 
     
-
+        <!-- SIDE BAR -->
         <div id="sideBarL">
             <div class="logo">
                 <a href="#">
                      <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/SF_Logo2.svg"/>
+                     
                 </a>
             </div>
+        <!-- SIDE BAR -->
 
 
             <!-- PROJECT BUTTON -->
             <div class="projectBtn">
-            <a href="#">
-                     <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/ProjectIcon.svg"/>
-                </a>
+                <input type="image" id="js-ProjectBtn" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ProjectIcon.svg" alt="Submit">
+                <div class="projectBtn_tip">
+                <input type="image" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ToolTip.svg" alt="Create Project">
+                    <p>Creat New Project</p>
+                </div>
              </div>
              <!-- PROJECT BUTTON -->
 
             <!-- SETTINGS BUTTON -->
-            <div class="settingsBtn">
+            <!-- <div class="settingsBtn">
             <a href="#">
                      <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/SettingsICN.svg   "/>
                 </a>
-             </div>
+             </div> -->
             <!-- SETTINGS BUTTON -->
            
         </div>
-
+        <!-- MAIN CENTER WINDOW -->
         <div id="pageBdy">
-            <div id="topBar">
-                <!-- <h3>Lorem</h3> -->
-            </div>
-            </div>
-       
 
+            <div id="topBar">
+            
+                <div id="centerTitle">
+                    <p><?php printf( get_bloginfo ( 'name' ) ); ?></p>
+                </div>
+
+                <div id="userName">
+                     <!-- <p><?php printf( get_bloginfo ( 'name' ) ); ?></p> -->
+
+                    <p> 
+                    <?php
+                        // $current_user = wp_get_current_user();
+                        
+                        
+                        $current_user = wp_get_current_user();
+                        if ( ! ( $current_user instanceof WP_User ) ) {
+                             return;
+                         } else{
+                            printf( __( 'Inspire Us: %s', 'textdomain' ), esc_html( $current_user->display_name ) );
+                         }
+                        ?>
+                      </p>
+
+
+                </div>
+                
+                
+            </div>
+        </div>
+       <!-- MAIN CENTER WINDOW -->
+
+       <!-- RIGHT SIDE BAR -->
         <div id="PicBar">
-        <!-- <h3>Lorem</h3> -->
+        
     
         </div>
+        <!-- RIGHT SIDE BAR -->
 
 
 

@@ -14,8 +14,10 @@ const mix = require('laravel-mix');
 
 mix.js([
     'src/js/appIN.js',
+    'src/js/ProjectModle.js',
+    'src/js/MyPublicFunction.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
-    'node_modules/jquery/dist/jquery.min.js']
+    'node_modules/jquery/dist/jquery.js']//could look in the node_moduals also
     , 'src/php/app.js')
     .sass('src/css/mainStyle.scss', '../Synaptic/app.css')
     .copyDirectory('src/php/', '../Synaptic')  //copies the php folder contents to the parent dir.
@@ -28,12 +30,5 @@ mix.js([
             'src/**/*'
         ]     
     });
+
     
-    //'src/app.js'
-    //project.dev
-    //.copy('src/php/_front-page.php', './front-page.php')  //allows for renaming files
-    //.copy('src/php/_functions.php', './functions.php')
-    // mix.js([
-    //     'node_modules/jquery/dist/jquery.min.js',
-    //     'node_modules/bootstrap/dist/js/bootstrap.js',
-    //     'resources/assets/js/app.js'], 'public/js');

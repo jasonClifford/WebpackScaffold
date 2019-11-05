@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <?php wp_head();?>
-    <title>Document</title>
+    <title>GETTING HEADAER</title>
 </head>
-<body <?php body_class('test');?>>
+<body>
 
 
