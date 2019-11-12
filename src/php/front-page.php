@@ -30,21 +30,33 @@
 
 
             </div>
-            <div class="Modal-two"></div>
+            <div class="Modal-two">
+                <form method="post">
+
+                
+                    <label for="ProjectName">Enter Project Name</label>
+                    <input type="text" id="ProjectName" placeholder="ProjectName" spellcheck="true">
+
+                    <label for="UserName">Enter Username</label>
+                    <input type="text" id="txtUsername" placeholder="Username" spellcheck="false">
+                
+                
+
+                
+                
+                
+                
+                
+                </form>
+                <button id="js-dumbyPage" type="button" class="btn btn-secondary"><h3>Start a Page</h3></button>
+            </div>
 
 
             <div class="Modal-three">
                 <div id="Close_Btn">
                     <p>Cancel</p>
                 </div>
-
-
             </div>
-
-
-
-            
-        
         </div>
         <!-- End inner Modal Window -->
     </div>

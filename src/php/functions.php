@@ -1,6 +1,7 @@
 <?php
 
 require get_template_directory(). '/incDir/Project.php';
+require get_template_directory(). '/incDir/CreatePages.php';
 
 // function load_bootstrap(){
 //     wp_register_style('load_bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css', '', 1,'all');
@@ -26,6 +27,12 @@ function load_javascript(){
 
 add_action('wp_enqueue_scripts', 'load_javascript');
 
+function load_jQuery(){
+    wp_enqueue_script('jquery');
+}
+
+add_action('wp_enqueue_scripts', 'load_jQuery');
+
 
 //Customizer Sidebar
 function themeslug_customize_register( $wp_customize ) {
@@ -34,7 +41,10 @@ function themeslug_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'themeslug_customize_register' );
 ////////////////////////////////  SHOW HIDE ADMIN BAR  //////////////////////////////////////////////////////
 
-//show_admin_bar( false ); //show or hide top admin bar
+show_admin_bar( false ); //show or hide top admin bar
+
+
+
 
 ///////////////////////////////  RESTRICT USERS TO LOGIN TO THEIR SITE  /////////////////////////////////////
 

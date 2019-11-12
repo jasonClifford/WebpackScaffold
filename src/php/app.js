@@ -17801,14 +17801,17 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./src/js/MyPublicFunction.js":
-/*!************************************!*\
-  !*** ./src/js/MyPublicFunction.js ***!
-  \************************************/
+/***/ "./src/js/CreatePage.js":
+/*!******************************!*\
+  !*** ./src/js/CreatePage.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
 /// Not included in the webpack.mix.js Yet
+jQuery(document).ready(function ($) {
+  alert($('#test'));
+});
 
 /***/ }),
 
@@ -17820,38 +17823,38 @@ module.exports = g;
 /***/ (function(module, exports) {
 
 /////////// MODAL SECTION /////////////
+jQuery(document).ready(function ($) {
+  // always remember to define $ to be used later
+  ///  Open/Close Modal  ///
+  $('#js-ProjectBtn').click(function () {
+    $('#Project_modal').addClass('JS_Project_modal_OPN');
+  });
+  $('#Close_Btn').click(function () {
+    $('#Project_modal').removeClass('JS_Project_modal_OPN');
+  }); ///  Open/Close Modal  ///
+}); // END JQUERY
 ///  Open/Close Modal  ///
-function ModalOpen() {
-  var ModBTN = document.getElementById("js-ProjectBtn").addEventListener("click", Open_Modal);
-
-  function Open_Modal() {
-    //This opens the Modal up 
-    var OpenUpModal = document.getElementById("Project_modal");
-    OpenUpModal.classList.add("JS_Project_modal_OPN"); // OpenUpModal.style.display= "flex";
-
-    console.log(OpenUpModal);
-  }
-
-  ;
-}
-
-;
-ModalOpen();
-
-function ModalClose() {
-  var ModBTN = document.getElementById("Close_Btn").addEventListener("click", Close_Modal);
-
-  function Close_Modal() {
-    //This opens the Modal up 
-    var CloseDownModal = document.getElementById("Project_modal");
-    CloseDownModal.classList.remove("JS_Project_modal_OPN");
-  }
-
-  ;
-}
-
-;
-ModalClose(); ///  Open/Close Modal  ///
+///////////////////////////  CREATE A WORDPRESS PAGE ////////////////////////////////////////
+// function CreatWP_Page(){
+//     var DumbBTN = document.getElementById("js-dumbyPage").addEventListener("click",CRT_Wp_Page);
+//             function CRT_Wp_Page(){
+//                 $post_title = "<h1>My new Post!)</h1>";
+//                 $post_content = '<h3>this is the words i want to says</h3>';
+//                 $post_status = 'publish';
+//                 $post_type = 'page';
+//             //             $args = array (
+//             //                 'post_title' => $post_title,
+//             //                 'post_content' => $post_content,
+//             //                 'post_status' => $post_status,
+//             //                 'post_type' => $post_type
+//             //             );
+//             //     $post_id = wp_insert_post($args);    
+//             console.log($post_title, $post_content, $post_status, $post_type)
+//             ; 
+//             };
+//     };
+// CreatWP_Page();
+///////////////////////////  CREATE A WORDPRESS PAGE ////////////////////////////////////////
 
 /***/ }),
 
@@ -17860,23 +17863,22 @@ ModalClose(); ///  Open/Close Modal  ///
   !*** ./src/js/appIN.js ***!
   \*************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 // follow pattern in webpack.js to add other js files the same way as this one
-__webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
 
 /***/ }),
 
 /***/ 0:
-/*!*************************************************************************************************************************************************************************************************!*\
-  !*** multi ./src/js/appIN.js ./src/js/ProjectModle.js ./src/js/MyPublicFunction.js ./node_modules/bootstrap/dist/js/bootstrap.js ./node_modules/jquery/dist/jquery.js ./src/css/mainStyle.scss ***!
-  \*************************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/js/appIN.js ./src/js/ProjectModle.js ./src/js/CreatePage.js ./node_modules/bootstrap/dist/js/bootstrap.js ./node_modules/jquery/dist/jquery.js ./src/css/mainStyle.scss ***!
+  \*******************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\appIN.js */"./src/js/appIN.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\ProjectModle.js */"./src/js/ProjectModle.js");
-__webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\MyPublicFunction.js */"./src/js/MyPublicFunction.js");
+__webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\CreatePage.js */"./src/js/CreatePage.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\node_modules\bootstrap\dist\js\bootstrap.js */"./node_modules/bootstrap/dist/js/bootstrap.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\node_modules\jquery\dist\jquery.js */"./node_modules/jquery/dist/jquery.js");
 module.exports = __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\css\mainStyle.scss */"./src/css/mainStyle.scss");
