@@ -31,24 +31,22 @@
 
             </div>
             <div class="Modal-two">
-                <form method="post">
+                <div class="CP-form">
+                    <form id="js_CreatePage" method="POST" enctype="multipart/form-data" action="">
 
-                
-                    <label for="ProjectName">Enter Project Name</label>
-                    <input type="text" id="ProjectName" placeholder="ProjectName" spellcheck="true">
+                    
+                        <label for="ProjectName">Enter Project Name:</label>
+                        <input type="text" id="ProjectName" name="Project_name" placeholder="Project Name" spellcheck="true"></input>
 
-                    <label for="UserName">Enter Username</label>
-                    <input type="text" id="txtUsername" placeholder="Username" spellcheck="false">
-                
-                
+                        <label for="ProjectDiscription">Project Discription:</label>
+                        <input type="text" id="ProjectDiscription" name="ProjectDiscription" placeholder="Project Discription" spellcheck="true"></input>
+                        <small class="field_msg"></small>
+                        <button id="js-dumbyPage" type="submit" class="btn btn-secondary"><h3>Start a Project</h3></button>
+                    
+                    </form>
 
-                
-                
-                
-                
-                
-                </form>
-                <button id="js-dumbyPage" type="button" class="btn btn-secondary"><h3>Start a Page</h3></button>
+                </div>
+
             </div>
 
 

@@ -16,6 +16,10 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
 
 });// END JQUERY
 
+
+
+
+
     ///  Open/Close Modal  ///
 ///////////////////////////  CREATE A WORDPRESS PAGE ////////////////////////////////////////
 
