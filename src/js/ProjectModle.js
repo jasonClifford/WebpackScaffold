@@ -13,51 +13,24 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
 
     ///  Open/Close Modal  ///
 
+    //  Dynamic inner html updating //
+
+ 
+
+
+    $('#ProjectName').keyup(function(){
+        var origin   =  $(location).attr('pathname');
+        
+       $('#urlAppend').text($(location).attr('pathname') + $('#ProjectName').val().replace(/[^a-z0-9\s]/gi, '').replace(/\s+/g, '-').toLowerCase());
+       
+    });
+
+    /////////////////////////////////
+
+    /////////////////// CLICK INTO FOR SUBMIT BUTTON //////////////////////////
+    $('#sub-js-CreatePageBTN').click(function(){
+        $("#js-CreatePageBTN").click()
+    });
+
 
 });// END JQUERY
-
-
-
-
-
-    ///  Open/Close Modal  ///
-///////////////////////////  CREATE A WORDPRESS PAGE ////////////////////////////////////////
-
-// function CreatWP_Page(){
-//     var DumbBTN = document.getElementById("js-dumbyPage").addEventListener("click",CRT_Wp_Page);
-
-//             function CRT_Wp_Page(){
-
-             
-
-//                 $post_title = "<h1>My new Post!)</h1>";
-//                 $post_content = '<h3>this is the words i want to says</h3>';
-//                 $post_status = 'publish';
-//                 $post_type = 'page';
-
-
-//             //             $args = array (
-//             //                 'post_title' => $post_title,
-//             //                 'post_content' => $post_content,
-//             //                 'post_status' => $post_status,
-//             //                 'post_type' => $post_type
-
-//             //             );
-
-//             //     $post_id = wp_insert_post($args);    
-                
-//             console.log($post_title, $post_content, $post_status, $post_type)
-//             ; 
-              
-
-//             };
-
-
-
-
-//     };
-
-// CreatWP_Page();
-
-///////////////////////////  CREATE A WORDPRESS PAGE ////////////////////////////////////////
-

@@ -7,22 +7,22 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
     $('#js_CreatePage').on('submit', function(e){
         e.preventDefault();
 
-        ajaxRequest();   // REF FUNCTION BELOW
+        $('#Project_modal').removeClass('JS_Project_modal_OPN');// close moddle window
+
+        ajaxCreatePage();   // REF FUNCTION BELOW
+      
+
     });
 
 
-     function ajaxRequest(){
+     function ajaxCreatePage(){
+   
         var ProjectName = document.querySelector('#ProjectName'),
             ProjectDiscript = document.querySelector('#ProjectDiscription'),
             ajaxURL = postdata.ajax_url,
-            nonceValue = postdata.ajax_nonce;
-        
-        //console.log(ajaxURL);
-        //console.log(ProjectDiscript.value);
-       // console.log(ProjectName.value);
-
-
-      
+            TypeOption = $( '#js-PageType').val(),
+            nonceValue = postdata.ajax_nonce;  
+            console.log(TypeOption);
         
 
          var request = $.post(
@@ -32,22 +32,22 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
                 security: nonceValue,
                 ProjectName: ProjectName.value,
                 ProjectDiscript: ProjectDiscript.value,
+                TypeOption: TypeOption,
 
           },
-             function( status ){
-              console.log(status); //result if data recieved from js file
-            },
+             
      );
-
-         request.done(function(response){
-           console.log('The server responded:');
-              console.log(response);
-
-
-       });
 
 
     };
+    //////  STOPS UNWATNTED PAGE CREATION IF "ENTER" KEY IS HIT   ////////////////////////
+    $('#js_CreatePage').on('keyup keypress', function(e) {
+        var keyCode = e.keyCode || e.which;
+        if (keyCode === 13) { 
+          e.preventDefault();
+          return false;
+        }
+      });
 
 
 

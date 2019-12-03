@@ -10,10 +10,11 @@
 
 function CreatePage(){
 
-    $results = '';
     $post_title = $_POST['ProjectName'];
-    echo '<pre>';
-    print_r( $post_title );
+    $post_excerpt = $_POST['ProjectDiscript'];
+    $tags = $_POST['TypeOption'];
+  
+    
     
     
     // Create post object
@@ -21,12 +22,17 @@ function CreatePage(){
 		'post_type'		=> 'page',
 		'post_title'	=> $post_title,
 		'post_status'	=> 'publish',
-		'post_author'	=> 1,
+        'post_author'	=> $user_id,
+        'post_excerpt'  => $post_excerpt,
+        'tags_input'  => array($tags),
     );
     
-    wp_insert_post( $new_Post_gen );
-    die($results);
+    $post_id = wp_insert_post( $new_Post_gen );
+
+    die();
 
    
 }
+
+
 add_action( 'wp_ajax_my_ajax_hook','CreatePage' );
