@@ -28,11 +28,13 @@ function CreatePage(){
     );
     
     $post_id = wp_insert_post( $new_Post_gen );
-
-    die();
+    
+    wp_die();
 
    
 }
 
 
 add_action( 'wp_ajax_my_ajax_hook','CreatePage' );
+
+////////////// Get Pages to dispay /////////////////

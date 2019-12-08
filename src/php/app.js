@@ -17844,7 +17844,7 @@ jQuery(document).ready(function ($) {
       e.preventDefault();
       return false;
     }
-  });
+  }); ////////////// Get Pages to dispay /////////////////
 }); // END JQUERY
 
 /***/ }),
@@ -17869,13 +17869,20 @@ jQuery(document).ready(function ($) {
   //  Dynamic inner html updating //
 
   $('#ProjectName').keyup(function () {
-    var origin = $(location).attr('pathname');
-    $('#urlAppend').text($(location).attr('pathname') + $('#ProjectName').val().replace(/[^a-z0-9\s]/gi, '').replace(/\s+/g, '-').toLowerCase());
+    var path = $(location).attr('pathname');
+    var origin = window.location.origin;
+    $('#urlAppend').text(window.location.origin + $(location).attr('pathname') + $('#ProjectName').val().replace(/[^a-z0-9\s]/gi, '').replace(/\s+/g, '-').toLowerCase());
   }); /////////////////////////////////
   /////////////////// CLICK INTO FOR SUBMIT BUTTON //////////////////////////
 
   $('#sub-js-CreatePageBTN').click(function () {
-    $("#js-CreatePageBTN").click();
+    $("#js-CreatePageBTN").click(); // Millisecond delay to reset curent window
+
+    var yourUhere = window.location.href;
+    var delay = 1000;
+    setTimeout(function () {
+      window.location = yourUhere;
+    }, delay);
   });
 }); // END JQUERY
 

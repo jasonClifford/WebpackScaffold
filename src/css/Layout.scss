@@ -246,6 +246,37 @@
                 width: 100%;
                 height: 100%;
                 background-color: rgb(255, 196, 235);
+
+
+              
+
+                .PagesList2{
+                    //position: relative;
+                    width: 400px;
+                    height: 100px;
+                    //background-color: rgb(65, 63, 196);
+                    .Game{
+                        background-color: azure;
+                    }
+                    .Movie{
+                        background-color: rgb(31, 59, 59);
+                    }
+
+                        #ProjectBox{
+                           // background-color: rgb(196, 63, 145);
+
+                           
+
+                            a{
+                                font: bold;
+                                font-size: 2rem;
+                                color: black;
+                                text-decoration: none;
+                            }
+
+                        }
+    
+                    }
             }
 
           

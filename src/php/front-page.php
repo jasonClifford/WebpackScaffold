@@ -41,7 +41,7 @@
                         <label for="ProjectName">Enter Project Name:</label>
                         <input type="text" id="ProjectName" name="Project_name" placeholder="Project Name" spellcheck="true"></input>
                         <div id="urlAppend"><p>URL</p></div>
-                        <label for="ProjectDiscription">Project Discription:</label>
+                        <label for="ProjectDiscription">Project Description:</label>
                         <input type="text" id="ProjectDiscription" name="ProjectDiscription" placeholder="Project Discription" spellcheck="true"></input>
                         <div id="CustomPageType">
                             <label for="js-PageType">Select Project Type:</label>
@@ -136,22 +136,26 @@
             </div>
             
             <div id="ProjectsLists">
-                    <!-- //////////////// GET ALL PAGES ///////////// -->
 
-                    <select name="page-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'> 
-                    <option value=""><?php echo esc_attr( __( 'Select page' ) ); ?></option> 
-                        <?php 
-                        $pages = get_pages(); 
-                        foreach ( $pages as $page ) {
-                            $option = '<option value="' . get_page_link( $page->ID ) . '">';
-                            $option .= $page->post_title;
-                            $option .= '</option>';
-                            echo $option;
-                        }
-                        ?>
-                    </select>
+                    <div class="PagesList2">
+                    <!-- ///////////////////////Get all pages ///////////////////////-->
+                    <?php 
+                            $pages = get_pages();
+                                    foreach ( $pages as $page ) {
+                                        $tags = get_the_tags( $page->ID );
+                                        $element    = '<div id="ProjectBox"';
+                                        $element    .= 'class="'. $tags[0]->name.'">';
+                                        $element    .= '<a href="'. get_page_link($page->ID).'">';
+                                        $element    .= $page->post_title;   
+                                        $element    .= '</a>';
+                                        $element    .= '</div>';
+                                        echo $element;
+                                    }
+                    ?>
 
-                    <!-- //////////////// GET ALL PAGES ///////////// -->
+                    </div>
+
+
                 </div>
 
         </div>
