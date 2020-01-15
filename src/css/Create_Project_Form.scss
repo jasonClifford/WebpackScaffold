@@ -1,65 +1,89 @@
 .CP-form{
-    display: flex;
-    align-content: flex-start;
+    display: grid;
+    grid-template-columns: 0.5fr  0.5fr;
     position: relative;
     background-color: rgb(255, 255, 255);
     width: 100%;
     height: 100%;
 
-    label{
-        color: $Logo_Blue;
-        display: inline-block;
-        font-size: 1.5rem;
-        font-weight: bold;
-        left: 1rem;
+    #js_CreatePage{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3rem 4rem 2rem 3rem 4rem 1rem 1rem;
+        row-gap: 0.5rem;
+        //grid-template-rows: repeat(7, 1fr);
+        justify-content: center;
         position: relative;
-        padding: 10px;
-        top: 2.5rem;
+        background-color: rgb(255, 255, 255);
         width: 100%;
-    }
-    input{
-        border: 1px solid $Background_Color;
-        border-radius:5px;
-        display: inline-block;
-        font-size: 1rem;
-        padding-left: 10px;
-        position: relative;
-        top: 2rem;
-        width: 50%;
-        left: 1rem;
-    }
-    input:focus{
-        border: 1px solid $Logo_Blue;
-    }
+        height: 100%;
 
-  
-    #urlAppend{
-        display: block;
-        color: $Logo_Blue;
-        font-size: .75rem;
-        font-weight: bold;
-        margin-left: -5px;
-        padding-left: 5px;
-        position: relative;
-        top: 2rem;
-        width: auto;
-        left: 1rem;
+            label{
+                color: $Logo_Blue;
+                display: inline-block;
+                font-size: 1.5rem;
+                font-weight: bold;
+                left: 1rem;
+                position: relative;
+                padding: 10px;
+               // top: 2.5rem;
+                width: 100%;
+                
+            }
+            input{
+                border: 1px solid $Background_Color;
+                border-radius:5px;
+                display: inline-block;
+                font-size: 1rem;
+                padding-left: 10px;
+                position: relative;
+               // top: 2rem;
+                width: 50%;
+                left: 1rem;
+            }
+            input:focus{
+                border: 1px solid $Logo_Blue;
+            }
 
-    }
-    #js-PageType{
-        padding: 10px;
-        position: relative;
-        left: 1rem;
-        top: 3rem;
-        width: 20rem;
+        
+            #urlAppend{
+                display: block;
+                color: $Logo_Blue;
+                font-size: .75rem;
+                font-weight: bold;
+                margin-left: -5px;
+                padding-left: 5px;
+                position: relative;
+                //top: 2rem;
+                width: auto;
+                left: 1rem;
+
+            }
+            #js-PageType{
+                padding: 10px;
+                position: relative;
+                left: 1rem;
+                //top: 3rem;
+                width: 20rem;
 
 
-    }
+            }
+
+
+        }// END OF js_CreatePage FORM
+
+        #js_UploadImg{
+            background-color: green;
+            display: flex;
+            align-content: flex-start;
+            position: relative;
+
+
+        }
 
 
 
-
-}// END OF FORM
+    }// END OF .CP-form FORM
 
 #js-CreatePageBTN{ //// HIDDEN SUBMIT FORM BUTTON
     display: none;

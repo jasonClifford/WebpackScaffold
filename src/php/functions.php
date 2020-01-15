@@ -3,13 +3,7 @@
 require get_template_directory(). '/incDir/Project.php';
 require get_template_directory(). '/incDir/CreatePages.php';
 require get_template_directory(). '/incDir/MustLogin.php';
-
-// function load_bootstrap(){
-//     wp_register_style('load_bootstrap', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap.min.css', '', 1,'all');
-//     wp_enqueue_style('load_bootstrap');
- 
-// }
-// add_action('wp_enqueue_scripts', 'load_bootstrap');
+require get_template_directory(). '/incDir/PosterUpload.php';
 
 
 
@@ -22,34 +16,61 @@ add_action('wp_enqueue_scripts', 'load_stylesheets');
 
 function load_javascript(){
     wp_register_script('custom', get_template_directory_uri() . '/app.js', 'jquery', 1, true);
-    ////////////////////////get ajax localized
-	wp_localize_script( 'custom', 'postdata', array(
-        'ajax_url'   => admin_url( 'admin-ajax.php' ),
+   // wp_register_script( 'PosterUpload', get_template_directory_uri(). '/app.js', array(), '1.1', true );
+   // wp_register_script('CPnonce', get_template_directory_uri() . '/app.js', 1, true);
+    
+    wp_enqueue_script('custom');
+
+    /////////////////////////// AJAX LOCALIZED
+    //Create New Page Nonce
+	wp_localize_script( 'custom', 'CreatePageNC', array(
+        'ajax_url2'   => admin_url( 'admin-ajax.php' ),
         'ajax_nonce' =>wp_create_nonce( 'Cr3ateP@geN0nce' ), //Create nonce and send it to js file in postdata.ajax_nonce.
          ));       //https://www.creare.co.uk/blog/wp/wp-localize-script-wordpress
-    wp_enqueue_script('custom');
+        // wp_enqueue_script('custom');
+    //Poster - Post-Thumbnail
+     $script_data_array = array(
+        'ajaxurl' => admin_url( 'admin-ajax.php' ),
+    );
+    wp_localize_script( 'custom', 'aw', $script_data_array );
+ 
+    // Enqueued script with localized data.
+    //wp_enqueue_script( 'PosterUpload' );
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
 
+
+
+
+
+
+
+
+
+
+    ////////////////////////// ADD JQUERY SUPPORT
 function load_jQuery(){
     wp_enqueue_script('jquery');
 }
 
 add_action('wp_enqueue_scripts', 'load_jQuery');
 
-/////////////////////////// add tag support to pages
+    /////////////////////////// ADD TAG SUPPORT TO PAGES
 function tags_support_all() {
 	register_taxonomy_for_object_type('post_tag', 'page');
 }
 
-// ensure all tags are included in queries
+    /////////////////////////// ENSURE ALL TAGS ARE ADDED TO QUERYS
 function tags_support_query($wp_query) {
 	if ($wp_query->get('tag')) $wp_query->set('post_type', 'any');
 }
 
-// tag hooks
+    /////////////////////////// TAG HOOKS SUPPORT
 add_action('init', 'tags_support_all');
 add_action('pre_get_posts', 'tags_support_query');
+
+    /////////////////////////// FEATURE IMAGE/ POST-THUMBNAILS SUPPORT
+add_theme_support( 'post-thumbnails' );
 
 
 ////////////////////////////////  SHOW HIDE ADMIN BAR  //////////////////////////////////////////////////////

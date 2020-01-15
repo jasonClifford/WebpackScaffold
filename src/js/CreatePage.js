@@ -19,16 +19,14 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
    
         var ProjectName = document.querySelector('#ProjectName'),
             ProjectDiscript = document.querySelector('#ProjectDiscription'),
-            ajaxURL = postdata.ajax_url,
+            ajaxURL = CreatePageNC.ajax_url2,
             TypeOption = $( '#js-PageType').val(),
-            nonceValue = postdata.ajax_nonce;  
-            console.log(TypeOption);
-        
+            nonceValue = CreatePageNC.ajax_nonce;          
 
          var request = $.post(
             ajaxURL,    //this points to the url ajax-admin.php as a var
            {
-                action: 'my_ajax_hook',
+                action: 'CreatePage',
                 security: nonceValue,
                 ProjectName: ProjectName.value,
                 ProjectDiscript: ProjectDiscript.value,

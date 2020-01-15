@@ -13,10 +13,7 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
 
     ///  Open/Close Modal  ///
 
-    //  Dynamic inner html updating //
-
- 
-
+    //  Dynamicly fix typed words to look like resulting URL from Page creation //
 
     $('#ProjectName').keyup(function(){
         var path   =  $(location).attr('pathname');

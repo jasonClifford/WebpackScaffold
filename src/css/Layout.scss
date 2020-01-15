@@ -10,11 +10,83 @@
     //     display: none; //between flex and none
     //     opacity: 0%;
     //     transition: opacity 1s;
-
+//
     // }
-    
 
-    .JS_Project_modal{
+
+                   ////////// SCROLL BAR //////////////////
+               /* width */
+               ::-webkit-scrollbar {
+                width: 20px;
+            }
+
+           /* Track */
+            ::-webkit-scrollbar-track {
+                box-shadow: inset 0 0 5px grey; 
+                border-radius: 10px;
+            }
+            
+            /* Handle */
+            ::-webkit-scrollbar-thumb {
+                background: rgb(45, 45, 45); 
+                border-radius: 10px;
+            }
+            
+            /* Handle on hover */
+            ::-webkit-scrollbar-thumb:hover {
+                background:  rgb(55, 55, 55); 
+            }
+            ////////// SCROLL BAR //////////////////
+
+     .JS_Poster_Modal{//poster Modal popup window
+         display: flex; //between flex and none
+         align-items: center;
+         opacity: 0%;
+         position: fixed;
+         width: 100vw;
+         height: 100vh;
+         justify-content: center;
+         background-color: rgba(0, 0, 0, 0.8);
+         visibility: hidden;
+         z-index: 1;
+         transition:opacity 0.3s, visibility 0.3s;
+        
+            &.JS_Poster_Modal_OPN{
+                visibility: visible;
+                opacity: 100%;
+                }
+
+                .Poster_pop{
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 0.5rem;
+                    box-shadow: 5px 15px 20px #2b2b2b;
+                    display: grid;  
+                    grid-template-columns: 70% 30%;
+                    height: 45vh;
+                    width: 30vw;
+
+                    .PosterCLS{
+
+                        border: 1px solid $Logo_Blue;
+                        border-radius: 1rem;
+                        text-align: center;
+                        color: white;
+                        background-color: $Logo_Red;
+                        width: 9rem;
+                        height: 2rem;
+                        position: sticky;
+                        cursor: pointer;
+                        top: 65vh;
+                    }
+                    .PosterCLS:hover{
+                        background-color: rgb(119, 15, 15);
+                        color: white;
+
+                    }
+                }
+        }//poster Modal popup window end
+
+    .JS_Project_modal{/////////Project pop up Moddle
         display: flex; //between flex and none
         align-items: center;
         opacity: 0%;
@@ -31,6 +103,8 @@
             visibility: visible;
             opacity: 100%;
         }
+
+        
 
             
 
@@ -242,41 +316,145 @@
             }
 
             #ProjectsLists{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: repeat(3, 1fr);
+                column-gap: 2rem;
+                row-gap: 2rem;
+                justify-items: center;
+                overflow-x: hidden;
+                margin-top: 2rem;
                 position: relative;
-                width: 100%;
-                height: 100%;
-                background-color: rgb(255, 196, 235);
-
-
+                width: 90vw;
+                height: 90vh;
               
 
-                .PagesList2{
-                    //position: relative;
-                    width: 400px;
-                    height: 100px;
-                    //background-color: rgb(65, 63, 196);
-                    .Game{
-                        background-color: azure;
-                    }
-                    .Movie{
-                        background-color: rgb(31, 59, 59);
+
+
+
+
+                    .Home{
+                        display: none;
+                        
                     }
 
-                        #ProjectBox{
-                           // background-color: rgb(196, 63, 145);
+                    
+                        .Game{
+                            
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(3, 1fr);
+                            justify-content: center;
+                            width: 300px;
+                            height: 300px;
 
-                           
+                            .PosterImg{
+                                margin-top: 21px;
+                                margin-left: 52px;
+                                text-align: center;
+                                width: 198px;
+                                height: 110px;
+                                background-color: rgb(147, 153, 56);
+                                cursor: pointer;
+
+                                img{
+                                    display: block;
+                                    overflow: hidden;
+                                    text-align: center;
+                                    width: 198px;
+                                    height: 110px;
+
+                                }
+                            }
+
+
 
                             a{
-                                font: bold;
-                                font-size: 2rem;
-                                color: black;
+                                position: relative;
+                                padding: 20px;
+                                //margin-top: -70px;
+                                display: flex;
+                                justify-content: center;
+                                height: auto;
+                                width: 100%;
+                                font-weight: bold;
+                                font-size: 25px;
+                                color: $Logo_Green;
                                 text-decoration: none;
                             }
 
+                            lable{
+                                //margin-top: 10px;
+                                font-weight: bold;
+                                color: $Logo_Blue;
+                                display: flex;
+                                justify-content: center;
+                                position: relative;
+                                font-size: 1rem;
+
+                            }
                         }
+                        .Movie{
+                            display: grid;
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(3, 1fr);
+                            justify-content: center;
+                            width: 300px;
+                            height: 300px;
+                            background-size: 300px 200px;
+
+                            .PosterImg{
+                                background-color: rgb(147, 153, 56);
+                                border-radius: 20px;
+                                display: block;
+                                margin-top: 37px;
+                                margin-left: 57px;
+                                overflow: hidden;
+                                text-align: center;
+                                width: 185px;
+                                height: 125px;
+                                cursor: pointer;
+
+                                img{
+                                    display: block;
+                                    overflow: hidden;
+                                    text-align: center;
+                                    width: 185px;
+                                    height: 125px;
+
+                                }
+                                
+                            }
+
+
+                            a{
+                                position: relative;
+                                padding: 20px;
+                                display: flex;
+                                justify-content: center;
+                                height: auto;
+                                width: 100%;
+                                font-weight: bold;
+                                font-size: 25px;
+                                color: $Logo_Green;
+                                text-decoration: none;
+                            }
+
+                            lable{
+                               // margin-top: 10px;
+                                font-weight: bold;
+                                color: $Logo_Blue;
+                                display: flex;
+                                justify-content: center;
+                                position: relative;
+                                font-size: 1rem;
+
+                            }
+                        }
+
+                       
     
-                    }
+                    
             }
 
           

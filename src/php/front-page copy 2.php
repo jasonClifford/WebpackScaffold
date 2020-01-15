@@ -17,13 +17,20 @@
 <div class="JS_Poster_Modal">
     <div class="Poster_pop">
         <div class="section1">
-            <form id="js_PosterUpload" method="POST" enctype="multipart/form-data" action="">
-
-                    <label>Choose File:</label>
-                    <input type="file" id="file" accept="image/*" />
-                    <input type="text" id="ID" name="ID" ></input>
+           <!-- <div id="JS_HideID"><p>Hide the Id Here</p></div> -->
+            <!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXX    UPLOAD IMG TEST 1  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
+            <form id="JS_Set_Poster" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label><?php _e('Select Image:', 'Your text domain here');?></label>
+                    <input type="file" name="image">
+                    <input type="text" id="JS_HideID" name="ID" ></input>
+                </div>
+                <div class="form-group" style="margin-top:20px;">
+                    <input type="submit" name="SubmitPoster" value="Upload Image">
+                </div>
             </form>
-            <p id="fp"></p>
+   
+<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXX    UPLOAD IMG TEST 1 END XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX -->
 
         </div>
         <div class="section2">

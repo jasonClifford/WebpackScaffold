@@ -17821,13 +17821,12 @@ jQuery(document).ready(function ($) {
   function ajaxCreatePage() {
     var ProjectName = document.querySelector('#ProjectName'),
         ProjectDiscript = document.querySelector('#ProjectDiscription'),
-        ajaxURL = postdata.ajax_url,
+        ajaxURL = CreatePageNC.ajax_url2,
         TypeOption = $('#js-PageType').val(),
-        nonceValue = postdata.ajax_nonce;
-    console.log(TypeOption);
+        nonceValue = CreatePageNC.ajax_nonce;
     var request = $.post(ajaxURL, //this points to the url ajax-admin.php as a var
     {
-      action: 'my_ajax_hook',
+      action: 'CreatePage',
       security: nonceValue,
       ProjectName: ProjectName.value,
       ProjectDiscript: ProjectDiscript.value,
@@ -17849,6 +17848,77 @@ jQuery(document).ready(function ($) {
 
 /***/ }),
 
+/***/ "./src/js/PosterModle.js":
+/*!*******************************!*\
+  !*** ./src/js/PosterModle.js ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+jQuery(document).ready(function ($) {
+  // always remember to define $ to be used later
+  ///  Open Modal  ///
+  $('.PosterImg').click(function (e) {
+    $('.JS_Poster_Modal').addClass('JS_Poster_Modal_OPN');
+    AJAX_Id.bind($(this))(); //bind the "this" selector to a given function
+  }); ///  Open Modal  ///
+  ///  Bind the Open Click to "THIS" and Populate a hidden input feild  ///
+
+  function AJAX_Id() {
+    /// Get the Id and pass to a Div for AJAX later use
+    var IDstr = $(this).find('p').text(); //alert(IDstr);
+    // $('#JS_HideID').empty().append(IDstr); 
+
+    var id = document.getElementById('ID');
+    id.value = IDstr; //writes the ID back into a form element
+  }
+
+  ;
+  $('#js_PosterUpload').on('change', '#file', function (e) {
+    if (this.files.length > 0) {
+      $.each(this.files, function (index, value) {
+        if (value.size > 2000000) {
+          alert('File Size too large');
+          setTimeout(location.reload.bind(location), 10);
+          wp_die(); // kills the ajax if larger than 2MB
+          //setTimeout(location.reload.bind(location), 10); 
+        }
+
+        ; //alert(value.size );
+
+        $('#fp').html($('#fp').html() + '<br />' + '<b>' + Math.round(value.size / 1024) + '</b> KB');
+      });
+      e.preventDefault();
+      $this = $(this);
+      file_ID = document.querySelector('#JS_HideID'), file_data = $(this).prop('files')[0];
+      form_data = new FormData();
+      form_data.append('ID', $("#ID").val());
+      form_data.append('file', file_data);
+      form_data.append('action', 'file_upload');
+      $.ajax({
+        url: aw.ajaxurl,
+        type: 'POST',
+        contentType: false,
+        processData: false,
+        data: form_data,
+        success: function success(response) {
+          //alert('File uploaded successfully.');
+          $('.JS_Poster_Modal').removeClass('JS_Poster_Modal_OPN'); // ///  Close Modal  ///
+
+          setTimeout(location.reload.bind(location), 10);
+        }
+      });
+    } //END IF 
+
+  }); ///  Close Modal -> Cancel BTN  ///
+
+  $('.PosterCLS').click(function () {
+    $('.JS_Poster_Modal').removeClass('JS_Poster_Modal_OPN');
+  }); ///  Close Modal  ///
+}); // END JQUERY
+
+/***/ }),
+
 /***/ "./src/js/ProjectModle.js":
 /*!********************************!*\
   !*** ./src/js/ProjectModle.js ***!
@@ -17866,7 +17936,7 @@ jQuery(document).ready(function ($) {
   $('#Close_Btn').click(function () {
     $('#Project_modal').removeClass('JS_Project_modal_OPN');
   }); ///  Open/Close Modal  ///
-  //  Dynamic inner html updating //
+  //  Dynamicly fix typed words to look like resulting URL from Page creation //
 
   $('#ProjectName').keyup(function () {
     var path = $(location).attr('pathname');
@@ -17895,20 +17965,21 @@ jQuery(document).ready(function ($) {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-// follow pattern in webpack.js to add other js files the same way as this one
+// follow pattern in webpack.mix.js to add other js files the same way as this one
 
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************************************************************************************************************************************************!*\
-  !*** multi ./src/js/appIN.js ./src/js/ProjectModle.js ./src/js/CreatePage.js ./node_modules/bootstrap/dist/js/bootstrap.js ./node_modules/jquery/dist/jquery.js ./src/css/mainStyle.scss ***!
-  \*******************************************************************************************************************************************************************************************/
+/*!*******************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/js/appIN.js ./src/js/ProjectModle.js ./src/js/CreatePage.js ./src/js/PosterModle.js ./node_modules/bootstrap/dist/js/bootstrap.js ./node_modules/jquery/dist/jquery.js ./src/css/mainStyle.scss ***!
+  \*******************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\appIN.js */"./src/js/appIN.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\ProjectModle.js */"./src/js/ProjectModle.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\CreatePage.js */"./src/js/CreatePage.js");
+__webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\PosterModle.js */"./src/js/PosterModle.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\node_modules\bootstrap\dist\js\bootstrap.js */"./node_modules/bootstrap/dist/js/bootstrap.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\node_modules\jquery\dist\jquery.js */"./node_modules/jquery/dist/jquery.js");
 module.exports = __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\css\mainStyle.scss */"./src/css/mainStyle.scss");

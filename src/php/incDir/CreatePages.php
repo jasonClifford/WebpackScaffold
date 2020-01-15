@@ -35,6 +35,6 @@ function CreatePage(){
 }
 
 
-add_action( 'wp_ajax_my_ajax_hook','CreatePage' );
+add_action( 'wp_ajax_CreatePage','CreatePage' );
 
 ////////////// Get Pages to dispay /////////////////
