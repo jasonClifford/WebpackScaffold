@@ -38,53 +38,7 @@
             }
             ////////// SCROLL BAR //////////////////
 
-     .JS_Poster_Modal{//poster Modal popup window
-         display: flex; //between flex and none
-         align-items: center;
-         opacity: 0%;
-         position: fixed;
-         width: 100vw;
-         height: 100vh;
-         justify-content: center;
-         background-color: rgba(0, 0, 0, 0.8);
-         visibility: hidden;
-         z-index: 1;
-         transition:opacity 0.3s, visibility 0.3s;
-        
-            &.JS_Poster_Modal_OPN{
-                visibility: visible;
-                opacity: 100%;
-                }
 
-                .Poster_pop{
-                    background-color: rgb(255, 255, 255);
-                    border-radius: 0.5rem;
-                    box-shadow: 5px 15px 20px #2b2b2b;
-                    display: grid;  
-                    grid-template-columns: 70% 30%;
-                    height: 45vh;
-                    width: 30vw;
-
-                    .PosterCLS{
-
-                        border: 1px solid $Logo_Blue;
-                        border-radius: 1rem;
-                        text-align: center;
-                        color: white;
-                        background-color: $Logo_Red;
-                        width: 9rem;
-                        height: 2rem;
-                        position: sticky;
-                        cursor: pointer;
-                        top: 65vh;
-                    }
-                    .PosterCLS:hover{
-                        background-color: rgb(119, 15, 15);
-                        color: white;
-
-                    }
-                }
-        }//poster Modal popup window end
 
     .JS_Project_modal{/////////Project pop up Moddle
         display: flex; //between flex and none
@@ -354,8 +308,11 @@
                                 text-align: center;
                                 width: 198px;
                                 height: 110px;
-                                background-color: rgb(147, 153, 56);
+                                overflow: hidden;
                                 cursor: pointer;
+                                p{
+                                    display: none;
+                                }
 
                                 img{
                                     display: block;
@@ -404,7 +361,6 @@
                             background-size: 300px 200px;
 
                             .PosterImg{
-                                background-color: rgb(147, 153, 56);
                                 border-radius: 20px;
                                 display: block;
                                 margin-top: 37px;
@@ -414,6 +370,10 @@
                                 width: 185px;
                                 height: 125px;
                                 cursor: pointer;
+
+                                p{
+                                    display: none;
+                                }
 
                                 img{
                                     display: block;

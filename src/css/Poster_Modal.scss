@@ -1,0 +1,105 @@
+.JS_Poster_Modal{////   POSTER MODAL POPUP BEGINS
+    display: flex; //between flex and none
+    align-items: center;
+    opacity: 0%;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    visibility: hidden;
+    z-index: 1;
+    transition:opacity 0.3s, visibility 0.3s;
+   
+       &.JS_Poster_Modal_OPN{
+           visibility: visible;
+           opacity: 100%;
+           }
+
+           .Poster_pop{ /// THE CSS FOR THE POSTER POPUP 
+               background-color: rgb(255, 255, 255);
+               border-radius: 0.5rem;
+               box-shadow: 5px 15px 20px #2b2b2b;
+               display: grid;  
+               grid-template-columns: 90% 10%;
+               height: 70vh;
+               width: 60vw;
+               //overflow: hidden;
+
+               #ID{
+                   display: none;
+               }
+
+               .Poster_pop_COL1{    
+                    display: grid;  
+                    grid-template-rows: 10% 90%;
+                    
+
+                    .Poster_pop_ROW1{ /// UPLOAD SECTION  
+                        
+                        
+                        .Title{
+                            color: $Logo_Blue;
+                            font-size: 20px;
+                            font-weight: bold;
+                            padding-left: 2rem;
+                        }
+                    }
+                    .Poster_pop_ROW2{ /// SELECT MEDIA FROM EXISTING
+                        margin-top: 25px;
+                        background-color: rgb(0, 128, 53);
+                        //overflow: hidden;
+                        
+
+                            #media-gallery{
+                                display: grid;
+                                grid-template-columns: repeat(4, 1fr);
+                                grid-template-rows: repeat(3, 1fr);
+                                column-gap: 10px;
+                                row-gap: 10px;
+                                justify-items: center;
+                                //overflow-x: hidden;
+                                //overflow: scroll;
+                                overflow-y: auto;
+                               // position: relative;
+                                width: 100%;
+                               height: 570px;
+                                //scroll-behavior: smooth;
+                               
+
+                                #Pics{
+                                    
+                                    width: 200px;
+
+                                    img{
+                                        max-width: 200px;    
+                                    }
+                                }
+                            }
+                    }
+
+               }
+
+               .section2{
+
+                    .PosterCLS{  /// POSTER POP CLOSE BTN
+
+                        border: 1px solid $Logo_Blue;
+                        border-radius: 1rem;
+                        text-align: center;
+                        color: white;
+                        background-color: $Logo_Red;
+                        width: 9rem;
+                        height: 2rem;
+                        position: sticky;
+                        cursor: pointer;
+                        top: 65vh;
+                    }
+                    .PosterCLS:hover{
+                        background-color: rgb(119, 15, 15);
+                        color: white;
+
+                    }
+                }
+           }
+   }//////   POSTER MODAL POPUP ENDS

@@ -16,16 +16,26 @@
 <!-- Modal POSTER popup window start --> 
 <div class="JS_Poster_Modal">
     <div class="Poster_pop">
-        <div class="section1">
-            <form id="js_PosterUpload" method="POST" enctype="multipart/form-data" action="">
+        <div class="Poster_pop_COL1">
+            <div class="Poster_pop_ROW1">
+                <div class="Title"><p>Upload Images to Poster</p></div>
+                <form id="js_PosterUpload" method="POST" enctype="multipart/form-data" action="">
 
-                    <label>Choose File:</label>
-                    <input type="file" id="file" accept="image/*" />
-                    <input type="text" id="ID" name="ID" ></input>
-            </form>
+                        <label>Choose File to Upload:</label>
+                        <input type="file" id="file" accept="image/*" />
+                        <input type="text" id="ID" name="ID" ></input>
+                        <button type="submit" id="PosterSBMT">submit</button>
+                </form>
             <p id="fp"></p>
+            </div>
+            <div class="Poster_pop_ROW2">
+                <h2>Images In Your Media Library</h2>
+                <?php echo display_images_from_media_library(); ?>
+            </div>
 
-        </div>
+
+
+        </div> <!-- END OF SECTION 1 -->
         <div class="section2">
             <div class="PosterCLS">
                 <p>Cancel</p>
@@ -175,14 +185,20 @@
                             background-size: auto;
                             
                         }
+                        .Game .PosterImg {
+                            background-image: url("<?php echo get_template_directory_uri(); ?>/Images/svg/200X110Poster.svg");
+                            background-repeat: no-repeat;
+                            background-size: auto;
+                            
+                        }
                         .Movie {
                             background-image: url("<?php echo get_template_directory_uri(); ?>/Images/svg/MoviePoster.svg");
                             background-repeat: no-repeat;
                             background-size: auto;
                             
                         }
-                        .PosterImg {
-                            background-image: url("<?php echo get_template_directory_uri(); ?>/Images/svg/MoviePoster.svg");
+                        .Movie .PosterImg {
+                            background-image: url("<?php echo get_template_directory_uri(); ?>/Images/svg/185X125Poster.svg");
                             background-repeat: no-repeat;
                             background-size: auto;
                             
@@ -205,8 +221,8 @@
                                         $element    .= '<lable>Discription:&nbsp';
                                         $element    .= $page->post_excerpt;
                                         $element    .= '</lable>'; 
-                                        $element    .='<div id="PostID">';
-                                        $element    .='</div>';
+                                       // $element    .='<div id="PostID">';
+                                       // $element    .='</div>';
 
                                         $element    .= '</div>';
                                         echo $element;

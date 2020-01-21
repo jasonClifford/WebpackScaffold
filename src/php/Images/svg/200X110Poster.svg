@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 200 110" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g id="Background">
+        <rect x="0" y="0" width="200" height="110" style="fill:rgb(235,235,235);"/>
+    </g>
+    <g id="Text" transform="matrix(1,0,0,1.1,0,0)">
+        <g transform="matrix(1,0,0,1,1.42109e-14,4.65529)">
+            <g transform="matrix(1,0,0,1,15.5526,5.45971)">
+                <text x="58.101px" y="46.31px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9.47px;">200 X 1<tspan x="90.043px 95.309px " y="46.31px 46.31px ">10</tspan>px</text>
+            </g>
+            <g transform="matrix(1,0,0,1,30.2247,3.49997)">
+                <text x="53.989px" y="61.413px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:9.47px;">Images</text>
+            </g>
+            <g transform="matrix(1,0,0,0.909091,-17.5637,19.8339)">
+                <text x="34.632px" y="19.258px" style="font-family:'ArialMT', 'Arial', sans-serif;font-size:20.833px;">Add Poster Image</text>
+            </g>
+        </g>
+        <g id="Dots">
+            <g transform="matrix(1,0,0,0.909091,0,0)">
+                <circle cx="161.456" cy="15.96" r="5.04" style="stroke:rgb(235,235,235);stroke-width:1px;"/>
+            </g>
+            <g transform="matrix(1,0,0,0.909091,12.0964,0)">
+                <circle cx="161.456" cy="15.96" r="5.04" style="stroke:rgb(235,235,235);stroke-width:1px;"/>
+            </g>
+            <g transform="matrix(1,0,0,0.909091,24.1927,0)">
+                <circle cx="161.456" cy="15.96" r="5.04" style="stroke:rgb(235,235,235);stroke-width:1px;"/>
+            </g>
+        </g>
+    </g>
+</svg>
