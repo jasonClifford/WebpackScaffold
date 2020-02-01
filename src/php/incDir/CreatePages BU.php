@@ -42,7 +42,7 @@ function CreatePage(){
     // $theTermId = get_term_by( 'name', $post_id, 'Project' );
     // $theTermId = $theTermId->term_id;
      // SET TERM TO POST
-     //wp_set_object_terms( $post_id, array($theTermId), 'Project' );     //(POST ID, array(termID), TAXONOMY NAME) ISSUE IS GETTING THE TERM ID
+    // wp_set_object_terms( $post_id, array($theTermId), 'Project' );    //(POST ID, array(termID), TAXONOMY NAME) ISSUE IS GETTING THE TERM ID
 
     // APPLY NEW TAX TO PAGE
     wp_die();

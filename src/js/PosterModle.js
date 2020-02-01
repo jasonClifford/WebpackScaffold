@@ -26,9 +26,12 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
   
       $('#PosterSBMT').click(function(e){
               e.preventDefault();
+             // $('body').css('cursor', 'progress');
             
               var fileInput = document.getElementById('file');
               var file = fileInput.files[0];
+
+              var MedLibSelect = document.getElementById('Pics');
               //alert(fileInput.value);
 
                 ////////// EVAL FILE SIZE LESS 2MB
@@ -56,7 +59,7 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
                       });
                 
                             $this = $(this);
-                            file_ID = document.querySelector('#JS_HideID'),/// GET ID AGAIN FROM HIDDEN FORM INPUT
+                           // file_ID = document.querySelector('#JS_HideID'),/// GET ID AGAIN FROM HIDDEN FORM INPUT
                             file_data = file;
                             form_data = new FormData();
                             form_data.append('ID', $("#ID").val());// GETS THE POST ID THAT IS HIDDEN
@@ -79,8 +82,25 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
 
                     }
 
+              
+
         
       });// END BUTTON CLICK
+
+
+
+
+
+
+      $('#Pics img').click(function(){
+          $('#Pics img').removeClass('imgSelected');
+          $(this).toggleClass('imgSelected');
+          var PostID = $("#ID").val()
+          var PosterIdStr =  $(this).parent().find('p').text();
+          alert(PostID);
+       // return false;
+
+      });
         
 
      

@@ -17876,9 +17876,11 @@ jQuery(document).ready(function ($) {
 
   ;
   $('#PosterSBMT').click(function (e) {
-    e.preventDefault();
+    e.preventDefault(); // $('body').css('cursor', 'progress');
+
     var fileInput = document.getElementById('file');
-    var file = fileInput.files[0]; //alert(fileInput.value);
+    var file = fileInput.files[0];
+    var MedLibSelect = document.getElementById('Pics'); //alert(fileInput.value);
     ////////// EVAL FILE SIZE LESS 2MB
 
     if (file === undefined) {
@@ -17901,8 +17903,8 @@ jQuery(document).ready(function ($) {
 
         $('#fp').html($('#fp').html() + '<br />' + '<b>' + Math.round(file.size / 1024) + '</b> KB');
       });
-      $this = $(this);
-      file_ID = document.querySelector('#JS_HideID'), /// GET ID AGAIN FROM HIDDEN FORM INPUT
+      $this = $(this); // file_ID = document.querySelector('#JS_HideID'),/// GET ID AGAIN FROM HIDDEN FORM INPUT
+
       file_data = file;
       form_data = new FormData();
       form_data.append('ID', $("#ID").val()); // GETS THE POST ID THAT IS HIDDEN
@@ -17924,7 +17926,14 @@ jQuery(document).ready(function ($) {
       });
     }
   }); // END BUTTON CLICK
-  ///  Close Modal -> Cancel BTN  ///
+
+  $('#Pics img').click(function () {
+    $('#Pics img').removeClass('imgSelected');
+    $(this).toggleClass('imgSelected');
+    var PostID = $("#ID").val();
+    var PosterIdStr = $(this).parent().find('p').text();
+    alert(PostID); // return false;
+  }); ///  Close Modal -> Cancel BTN  ///
 
   $('.PosterCLS').click(function () {
     $('.JS_Poster_Modal').removeClass('JS_Poster_Modal_OPN');

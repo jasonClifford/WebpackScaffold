@@ -28,10 +28,7 @@
                 </form>
             <p id="fp"></p>
             </div>
-            <div class="Poster_pop_ROW2">
-                <h2>Images In Your Media Library</h2>
-                <?php echo display_images_from_media_library(); ?>
-            </div>
+          
 
 
 
@@ -64,9 +61,9 @@
 
 
             </div>
-            <script type='text/javascript'>
+            <!-- <script type='text/javascript'>
                 var thing = "dim tings";
-            </script>
+            </script> -->
             <div class="Modal-two">
                 <div class="CP-form">
                 <!-- CREATE PROJECT FORM  -->
@@ -84,6 +81,10 @@
                                     <option value="Movie">Movie</option>
                                     <option value="Game">Game</option>
                                 </select>
+                        </div>
+                        <div class="Pro_checkBoxes"> 
+                            <H3>Check Project Options</H3>
+                        <input type="checkbox" name="gender" value="female"></input>
                         </div>
                         <!-- <small class="field_msg"></small> -->
                         <button id="js-CreatePageBTN" type="submit"></button>
@@ -114,7 +115,7 @@
         <!-- SIDE BAR -->
         <div id="sideBarL">
             <div class="logo">
-                <a href="#">
+                <a href="<?php echo get_site_url(); ?>">
                      <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/SF_Logo2.svg"/>
                      
                 </a>

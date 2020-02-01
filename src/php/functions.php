@@ -4,6 +4,7 @@ require get_template_directory(). '/incDir/Project.php';
 require get_template_directory(). '/incDir/CreatePages.php';
 require get_template_directory(). '/incDir/MustLogin.php';
 require get_template_directory(). '/incDir/PosterUpload.php';
+require get_template_directory(). '/incDir/MediaLib.php';
 
 
 
@@ -57,7 +58,9 @@ add_action('wp_enqueue_scripts', 'load_jQuery');
 
     /////////////////////////// ADD TAG SUPPORT TO PAGES
 function tags_support_all() {
-	register_taxonomy_for_object_type('post_tag', 'page');
+    register_taxonomy_for_object_type('post_tag', 'page');
+   
+    
 }
 
     /////////////////////////// ENSURE ALL TAGS ARE ADDED TO QUERYS
@@ -79,3 +82,43 @@ show_admin_bar( false ); //show or hide top admin bar
 
 ///////////////////////////////  SHOW HIDE ADMIN BAR  //////////////////////////////////////////////////////
 
+//////////////////////////////  ADD TAGS TO IMAGES  ///////////////////////////////////////////////
+// apply tags to attachments
+// function wptp_add_tags_to_attachments() {
+//     register_taxonomy_for_object_type( 'post_tag', 'attachment' );
+// }
+// add_action( 'init' , 'wptp_add_tags_to_attachments' );
+
+// register new taxonomy which applies to attachments
+function PROJECT_Atch_taxonomy() {
+    $labels = array(
+        'name'              => 'Project',
+        'singular_name'     => 'Project',
+        'search_items'      => 'Search Locations',
+        'all_items'         => 'All Projects',
+        'parent_item'       => 'Parent Project',
+        'parent_item_colon' => 'Parent Project:',
+        'edit_item'         => 'Edit Project',
+        'update_item'       => 'Update Project',
+        'add_new_item'      => 'Add New Project',
+        'new_item_name'     => 'New Project Name',
+        'menu_name'         => 'Project',
+    );
+ 
+    $args = array(
+        'labels' => $labels,
+        'hierarchical' => true,
+        'query_var' => 'true',
+        'rewrite' => 'true',
+        'show_admin_column' => 'true',
+    );
+ 
+    register_taxonomy( 'Project', 'attachment', $args );
+    //register_taxonomy( 'Project', 'page', $args );
+}
+add_action( 'init', 'PROJECT_Atch_taxonomy' );
+
+
+
+
+//////////////////////////////  ADD TAXONOMY TO IMAGES  ///////////////////////////////////////////////

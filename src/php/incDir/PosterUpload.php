@@ -3,7 +3,7 @@
 @package SynapticFire
 
 =====================
-    CreatePages PAGE
+  POSTER UPLOAD MAIN
 =====================
 */
 
@@ -15,14 +15,17 @@ function file_upload_callback() {
     $upload = wp_upload_bits($_FILES["file"]["name"], null, file_get_contents($_FILES["file"]["tmp_name"]));
     
    // }
-   $post_id = $post_ID; //**************set post id to which you need to set post thumbnail
+    $post_id = $post_ID; //**************set post id to which you need to set post thumbnail
     $filename = $upload['file'];
+    $tags = $post_ID;
     $wp_filetype = wp_check_filetype($filename, null );
+    
     $attachment = array(
         'post_mime_type' => $wp_filetype['type'],
-        'post_title' => sanitize_file_name($filename),
+        'post_title' => sanitize_file_name(basename($filename)),
         'post_content' => '',
-        'post_status' => 'inherit'
+        'post_status' => 'inherit',
+        'tags_input'  => array($tags),
     );
     $attach_id = wp_insert_attachment( $attachment, $filename, $post_id );
     require_once(ABSPATH . 'wp-admin/includes/image.php');
@@ -33,56 +36,7 @@ function file_upload_callback() {
 }
 
 add_action( 'wp_ajax_file_upload', 'file_upload_callback' );
-
 ///////////////////////////////////////////////////////////////////////////////////////////
-
-//////////////////////  GET AND DISPLAY IMAGES FROM MEDIA LIB   /////////////////////////////////////////////
-
-function get_images_from_media_library() {/// GET IMAGES AND PUT INTO ARRAY
-    $args = array(
-        'post_type' => 'attachment',
-        'post_mime_type' =>'image',
-        'post_status' => 'inherit',
-        //'posts_per_page' => 5,
-        'orderby' => 'rand'
-    );
-    $query_images = new WP_Query( $args );
-    $images = array();
-    foreach ( $query_images->posts as $image) {// this whole peice is a filter
-        $images[]= $image->ID; //guid gets path - ID gets the ID of image
-    }
-    return $images;
-};
-
-function display_images_from_media_library() { /// DISPLAY THE ARRAY IN HTML TO BE ECHOED OUT
-
-    $imgs = get_images_from_media_library();  // imgs can be any var as long as it referances the get_images.. funcion above
-	$html = '<div id="media-gallery">';
-	
-	foreach($imgs as $img) {
-	
-        $html .= '<div id="Pics">';
-            $html .= '<img src="' . wp_get_attachment_url($img) . '" alt="" />';
-            $html .= '<p>'.$img.'</p>';   
-            
-        $html .= '</div>'; 
-
-        
-	
-	}
-	
-	$html .= '</div>';
-	
-	return $html;
-
-};
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
-
-
 //  HELPFULL SITES
 
 
@@ -100,3 +54,6 @@ function display_images_from_media_library() { /// DISPLAY THE ARRAY IN HTML TO 
 //  Goo search:
 //  https://www.google.com/search?q=wordpress+ajax+image+upload&rlz=1C1CHBD_enCA860CA860&oq=wordpress+ajax+image+upload&aqs=chrome..69i57j0l4.11273j0j7&sourceid=chrome&ie=UTF-8
 // https://stackoverflow.com/questions/36767222/wordpress-and-ajax-upload-image-as-featured/36785673     Feature Image
+
+// Register custom Taxonomys:
+//https://code.tutsplus.com/articles/applying-categories-tags-and-custom-taxonomies-to-media-attachments--wp-32319

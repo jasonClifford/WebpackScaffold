@@ -5,13 +5,7 @@
     height: 100vh;
     grid-template-columns: 5rem auto 5rem;
     
-    // Modal popup window start{
-    // .JS_Project_modal{
-    //     display: none; //between flex and none
-    //     opacity: 0%;
-    //     transition: opacity 1s;
-//
-    // }
+ 
 
 
                    ////////// SCROLL BAR //////////////////
@@ -177,7 +171,7 @@
             .logo{
                 height: 3rem;
             }
-
+//Project Button
             .projectBtn{
                 position: relative;
                 width: 60px;
@@ -211,7 +205,43 @@
                 top: -55px;
 
             }
+//Media Button
+            .mediaBtn{
+                position: relative;
+                padding-top: 40%;
+                width: 60px;
+                height: 60px;
+                left:0.7rem;
+                top: 10vh;
+            }
 
+            .mediaBtn_tip{
+                //background-color: $SideBar_Color;
+                color: #B3B3B3;
+                left: 4rem;
+                position: relative;
+                text-align: center;
+                top: -70px;
+                width: 10rem;
+                visibility: hidden;
+                transition-property:visibility;
+                transition-duration: 0.2s;
+                transition-delay: 1s;
+
+            
+            }
+            .mediaBtn:hover .projectBtn_tip{
+                visibility: visible;
+
+            
+            }
+            .mediaBtn_tip p{
+                position: relative;
+                top: -55px;
+
+            }
+
+// Settings Button
             .settingsBtn{
                 position: relative;
                 width: 3.5rem;

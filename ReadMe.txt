@@ -32,3 +32,52 @@ IMAGE DISPLAY
 echo wp_get_attachment_url(get_option('option_image'));
 
 *************************************************************************************************
+
+**************************** MEDIA LIBRARY SHORTCODE *******************************************
+  <div class="Poster_pop_ROW2">
+                <h2>Images In Your Media Library</h2>
+                <?php echo display_images_from_media_library(); ?>
+            </div>
+//////  CSS
+    .Poster_pop_ROW2{ /// SELECT MEDIA FROM EXISTING
+                        margin-top: 25px;
+                        background-color: rgb(0, 128, 53);
+                        //overflow: hidden;
+                        
+
+                            #media-gallery{
+                                display: grid;
+                                grid-template-columns: repeat(4, 1fr);
+                                grid-template-rows: repeat(3, 1fr);
+                                column-gap: 10px;
+                                row-gap: 10px;
+                                justify-items: center;
+                                //overflow-x: hidden;
+                                //overflow: scroll;
+                                overflow-y: auto;
+                               // position: relative;
+                                width: 100%;
+                               height: 570px;
+                                //scroll-behavior: smooth;
+                               
+
+                                #Pics{
+                                    
+                                    width: 200px;
+
+                                    img{
+                                        cursor: pointer;
+                                        max-width: 200px;    
+                                    }
+                                }
+                                #Pics .imgSelected{
+                                    border: outset;
+                                    border-color: red;
+                                    border-style: solid;
+                                }
+                            }
+                    }
+
+**************************** MEDIA LIBRARY SHORTCODE *******************************************
+
+<H1><?php wp_title(''); ?></H1> // Get page title
