@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,7 +123,7 @@
         <!-- SIDE BAR -->
 
 
-            <!-- PROJECT BUTTON -->
+            <!-- SCRIPT BUTTON -->
             <div class="projectBtn">
                 <input type="image" id="js-ProjectBtn" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ProjectIcon.svg" alt="Submit">
                 <div class="projectBtn_tip">

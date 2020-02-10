@@ -81,3 +81,64 @@ echo wp_get_attachment_url(get_option('option_image'));
 **************************** MEDIA LIBRARY SHORTCODE *******************************************
 
 <H1><?php wp_title(''); ?></H1> // Get page title
+
+********************* Page create with Childern ***********************************************
+
+function create_initial_pages() {
+    $pages = array(
+        array(
+            'name'  => 'page1',
+            'title' => 'Page 1',
+            'child' => array(
+                'page1-1' => 'Page 1.1',
+                'page1-2' => 'Page 1.2',
+                'page1-3' => 'Page 1.3',
+                'page1-4' => 'Page 1.4'
+            )
+        )
+      
+    );
+
+    $template = array(
+        'post_type'   => 'page',
+        'post_status' => 'publish',
+        'post_author' => 1
+    );
+
+    foreach( $pages as $page ) {
+        $exists = get_page_by_title( $page['title'] );
+        $my_page = array(
+            'post_name'  => $page['name'],
+            'post_title' => $page['title']
+        );
+        $my_page = array_merge( $my_page, $template );
+
+        $id = ( $exists ? $exists->ID : wp_insert_post( $my_page ) );
+
+        if( isset( $page['child'] ) ) {
+            foreach( $page['child'] as $key => $value ) {
+                $child_id = get_page_by_title( $value );
+                $child_page = array(
+                    'post_name'   => $key,
+                    'post_title'  => $value,
+                    'post_parent' => $id
+                );
+                $child_page = array_merge( $child_page, $template );
+                if( !isset( $child_id ) ) wp_insert_post( $child_page );
+            }
+        }
+    }
+}
+
+************** Activate or Deactivate plugins *******************************
+https://kinsta.com/blog/disable-wordpress-plugins-loading/
+
+*****************************************************************************
+*************** Add custom user roles   *************************************
+https://usersinsights.com/wordpress-custom-role/
+
+*****************************************************************************
+*************** Possabile means to ASSIGN a page to a user     *************
+https://wordpress.stackexchange.com/questions/30211/access-on-specific-pages-in-wordpress-for-a-specific-user
+
+******************************************************************************

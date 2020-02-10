@@ -97,7 +97,7 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
           $(this).toggleClass('imgSelected');
           var PostID = $("#ID").val()
           var PosterIdStr =  $(this).parent().find('p').text();
-          alert(PostID);
+         // alert(PostID);
        // return false;
 
       });
