@@ -1,4 +1,15 @@
 
+<?php
+/**
+* Template Name: Visionary_Full
+*
+* @package WordPress
+* @subpackage Twenty_Fourteen
+* @since Twenty Fourteen 1.0
+*/
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

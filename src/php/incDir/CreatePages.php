@@ -76,7 +76,7 @@ function CreatePage(){
         $my_page = array(
             'post_name'         => $page['name'],
             'post_title'        => $page['title'],
-            'page_template'     => 'page.php'
+            'page_template'     => 'page_Full.php'
             
         );
         $my_page = array_merge( $my_page, $template );
@@ -90,7 +90,7 @@ function CreatePage(){
                     'post_name'         => $key,
                     'post_title'        => $value,
                     'post_parent'       => $id,
-                    'page_template'     => 'page.php'
+                    'page_template'     => 'page_Full.php'
                 );
                 $child_page = array_merge( $child_page, $template );
                 if( !isset( $child_id ) ) wp_insert_post( $child_page );
