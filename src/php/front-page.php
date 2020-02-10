@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -70,56 +69,25 @@
                 <!-- CREATE PROJECT FORM  -->
                     <form id="js_CreatePage" method="POST" enctype="multipart/form-data" action="">
 
-                        <div id="FormFill">
-                            <label for="ProjectName">Enter Project Name:</label>
-                            <input type="text" id="ProjectName" name="Project_name" placeholder="Project Name" spellcheck="true"></input>
-                            <div id="urlAppend"><p>URL</p></div>
-                            <label for="ProjectDiscription">Project Description:</label>
-                            <input type="text" id="ProjectDiscription" name="ProjectDiscription" placeholder="Project Discription" spellcheck="true"></input>
-                            <div id="CustomPageType">
-                                <label for="js-PageType">Select Project Type:</label>
-                                    <select name="js-PageType" id="js-PageType">
-                                        <option value="Movie">Movie</option>
-                                        <option value="Game">Game</option>
-                                    </select>
-                            </div>
-                            <button id="js-CreatePageBTN" type="submit"></button>
+                    
+                        <label for="ProjectName">Enter Project Name:</label>
+                        <input type="text" id="ProjectName" name="Project_name" placeholder="Project Name" spellcheck="true"></input>
+                        <div id="urlAppend"><p>URL</p></div>
+                        <label for="ProjectDiscription">Project Description:</label>
+                        <input type="text" id="ProjectDiscription" name="ProjectDiscription" placeholder="Project Discription" spellcheck="true"></input>
+                        <div id="CustomPageType">
+                            <label for="js-PageType">Select Project Type:</label>
+                                <select name="js-PageType" id="js-PageType">
+                                    <option value="Movie">Movie</option>
+                                    <option value="Game">Game</option>
+                                </select>
                         </div>
-
-
                         <div class="Pro_checkBoxes"> 
-                                <H3>Select Project Options</H3>
-
-                                <label class="switch">
-                                 <input type="checkbox" id="communication" checked >
-                                 <span class="slider round"></span>
-                                 <p>Communication</p>
-                                 <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/ProjectIcon.svg" />
-                                </label><br><br>
-
-                                <label class="switch">
-                                 <input type="checkbox" id="time_line" checked >
-                                 <span class="slider round"></span>
-                                <p>Time&nbspLine</p>
-                                </label><br><br>
-
-                                <label class="switch">
-                                 <input type="checkbox" id="locations" checked >
-                                 <span class="slider round"></span>
-                                 <p>Locations</p>
-                                </label><br><br>
-
-                                <label class="switch">
-                                 <input type="checkbox" id="budgeting" checked >
-                                 <span class="slider round"></span>
-                                <p>Budgeting</p>
-                                </label><br><br>
-
-
-
+                            <H3>Check Project Options</H3>
+                        <input type="checkbox" name="gender" value="female"></input>
                         </div>
                         <!-- <small class="field_msg"></small> -->
-                       
+                        <button id="js-CreatePageBTN" type="submit"></button>
                        
                     
                     </form>
@@ -239,8 +207,7 @@
                         </style>
                     <?php 
                             $TempDirectory= get_template_directory().'/Images/svg/SWTCH.svg';
-                            $pages = get_pages('parent');
-                                
+                            $pages = get_pages();
                                     foreach ( $pages as $page ) {
                                         $tags = get_the_tags( $page->ID );
                                         $element    = '<div ';
@@ -261,7 +228,6 @@
                                         $element    .= '</div>';
                                         echo $element;
                                     }
-                                
                     ?>
 
 

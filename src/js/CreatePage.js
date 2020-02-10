@@ -19,14 +19,9 @@ jQuery(document).ready(function($){  // always remember to define $ to be used l
    
         var ProjectName = document.querySelector('#ProjectName'),
             ProjectDiscript = document.querySelector('#ProjectDiscription'),
-            Com = $("#communication").is(":checked"),
-            Tim = $("#time_line").is(":checked"),
-            Loc = $("#locations").is(":checked"),
-            Bug = $("#budgeting").is(":checked"),
             ajaxURL = CreatePageNC.ajax_url2,
             TypeOption = $( '#js-PageType').val(),
-            nonceValue = CreatePageNC.ajax_nonce;  
-            alert(Tim);        
+            nonceValue = CreatePageNC.ajax_nonce;          
 
          var request = $.post(
             ajaxURL,    //this points to the url ajax-admin.php as a var

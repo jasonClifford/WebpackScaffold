@@ -17821,14 +17821,9 @@ jQuery(document).ready(function ($) {
   function ajaxCreatePage() {
     var ProjectName = document.querySelector('#ProjectName'),
         ProjectDiscript = document.querySelector('#ProjectDiscription'),
-        Com = $("#communication").is(":checked"),
-        Tim = $("#time_line").is(":checked"),
-        Loc = $("#locations").is(":checked"),
-        Bug = $("#budgeting").is(":checked"),
         ajaxURL = CreatePageNC.ajax_url2,
         TypeOption = $('#js-PageType').val(),
         nonceValue = CreatePageNC.ajax_nonce;
-    alert(Tim);
     var request = $.post(ajaxURL, //this points to the url ajax-admin.php as a var
     {
       action: 'CreatePage',
@@ -17936,8 +17931,8 @@ jQuery(document).ready(function ($) {
     $('#Pics img').removeClass('imgSelected');
     $(this).toggleClass('imgSelected');
     var PostID = $("#ID").val();
-    var PosterIdStr = $(this).parent().find('p').text(); // alert(PostID);
-    // return false;
+    var PosterIdStr = $(this).parent().find('p').text();
+    alert(PostID); // return false;
   }); ///  Close Modal -> Cancel BTN  ///
 
   $('.PosterCLS').click(function () {
