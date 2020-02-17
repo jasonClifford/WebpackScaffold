@@ -54,8 +54,24 @@ function CreatePage(){
             'name'  => $post_title,
             'title' => $post_title,
             'child' => array(
-                'script' => $post_title.'_Script',
-                'assets' => $post_title.'_Assets'
+                    'script' => array(
+                                    'Pname'      => $post_title.'_Script',
+                                    'Ptemplate'  => 'page_Full_Script.php'
+                                    ),
+                    'assets' => array(
+                                    'Pname'     => $post_title.'_Assets',
+                                    'Ptemplate' => 'page_Full_Assets.php'
+                    ),
+                    'settings' => array(
+                        'Pname'     => $post_title.'_Settings',
+                        'Ptemplate' => 'page_Full_Settings.php'
+                     )
+                        
+
+
+               
+                //'assets' => $post_title.'_Assets',
+               // 'settings' => $post_title.'_Settings'
                // 'page1-3' => 'Page 1.3',
                // 'page1-4' => 'Page 1.4'
             )
@@ -84,13 +100,13 @@ function CreatePage(){
         $id = ( $exists ? $exists->ID : wp_insert_post( $my_page ) );
 
         if( isset( $page['child'] ) ) {
-            foreach( $page['child'] as $key => $value ) {
+            foreach( $page['child'] as $key[] => $value ) {
                 $child_id = get_page_by_title( $value );
                 $child_page = array(
-                    'post_name'         => $key,
-                    'post_title'        => $value,
+                    'post_name'         => $value['Pname'],
+                    'post_title'        => $value['Pname'],
                     'post_parent'       => $id,
-                    'page_template'     => 'page_Full.php'
+                    'page_template'     => $value['Ptemplate'],
                 );
                 $child_page = array_merge( $child_page, $template );
                 if( !isset( $child_id ) ) wp_insert_post( $child_page );

@@ -1,7 +1,7 @@
 
 <?php
 /**
-* Template Name: Visionary_Full
+* Template Name: Visionary_Full_Scripts
 *
 */
 ?>
@@ -59,7 +59,7 @@
 
             <!-- SETTINGS BUTTON -->
             <div class="settingsBtn">
-            <a href="settings">
+            <a href="#">
                      <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/SettingsICN.svg   "/>
                 </a>
              </div>

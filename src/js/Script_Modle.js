@@ -1,6 +1,6 @@
 /////////// MODAL SECTION /////////////
 jQuery(document).ready(function($){  // always remember to define $ to be used later
-
+    
 
     ///  Open/Close Modal  ///
             // $('#js-ProjectBtn').click(function(){

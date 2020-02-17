@@ -17981,6 +17981,27 @@ jQuery(document).ready(function ($) {
 
 /***/ }),
 
+/***/ "./src/js/Script_Modle.js":
+/*!********************************!*\
+  !*** ./src/js/Script_Modle.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/////////// MODAL SECTION /////////////
+jQuery(document).ready(function ($) {// always remember to define $ to be used later
+  ///  Open/Close Modal  ///
+  // $('#js-ProjectBtn').click(function(){
+  //     $('#Project_modal').addClass('JS_Project_modal_OPN');
+  // });
+  // $('#Close_Btn').click(function(){
+  //     $('#Project_modal').removeClass('JS_Project_modal_OPN');
+  // });
+  ///  Open/Close Modal  ///
+}); // END JQUERY
+
+/***/ }),
+
 /***/ "./src/js/appIN.js":
 /*!*************************!*\
   !*** ./src/js/appIN.js ***!
@@ -17993,9 +18014,9 @@ jQuery(document).ready(function ($) {
 /***/ }),
 
 /***/ 0:
-/*!*******************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./src/js/appIN.js ./src/js/ProjectModle.js ./src/js/CreatePage.js ./src/js/PosterModle.js ./node_modules/bootstrap/dist/js/bootstrap.js ./node_modules/jquery/dist/jquery.js ./src/css/mainStyle.scss ***!
-  \*******************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./src/js/appIN.js ./src/js/ProjectModle.js ./src/js/CreatePage.js ./src/js/PosterModle.js ./src/js/Script_Modle.js ./node_modules/bootstrap/dist/js/bootstrap.js ./node_modules/jquery/dist/jquery.js ./src/css/mainStyle.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18003,6 +18024,7 @@ __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_Them
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\ProjectModle.js */"./src/js/ProjectModle.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\CreatePage.js */"./src/js/CreatePage.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\PosterModle.js */"./src/js/PosterModle.js");
+__webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\js\Script_Modle.js */"./src/js/Script_Modle.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\node_modules\bootstrap\dist\js\bootstrap.js */"./node_modules/bootstrap/dist/js/bootstrap.js");
 __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\node_modules\jquery\dist\jquery.js */"./node_modules/jquery/dist/jquery.js");
 module.exports = __webpack_require__(/*! D:\MAMP\MAMP\htdocs\SynapticFire\wp-content\themes\_ThemeBuilder\src\css\mainStyle.scss */"./src/css/mainStyle.scss");

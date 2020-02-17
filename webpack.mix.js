@@ -17,6 +17,7 @@ mix.js([
     'src/js/ProjectModle.js',
     'src/js/CreatePage.js',
     'src/js/PosterModle.js',
+    'src/js/Script_Modle.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/jquery/dist/jquery.js']//could look in the node_moduals also
     , 'src/php/app.js')
