@@ -5,6 +5,7 @@ require get_template_directory(). '/incDir/CreatePages.php';
 require get_template_directory(). '/incDir/MustLogin.php';
 require get_template_directory(). '/incDir/PosterUpload.php';
 require get_template_directory(). '/incDir/MediaLib.php';
+require get_template_directory(). '/incDir/UserRoles.php';
 
 
 

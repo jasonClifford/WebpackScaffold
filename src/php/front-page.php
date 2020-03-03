@@ -14,6 +14,8 @@
 <?php get_header();?>
 
 <div id="page">
+    
+    
 <!-- Modal POSTER popup window start --> 
 <div class="JS_Poster_Modal">
     <div class="Poster_pop">
@@ -43,8 +45,11 @@
 </div>
 
 
-</div>
-<!-- Modal POSTER popup window end -->     
+
+
+</div><!-- Modal POSTER popup window end -->     
+
+
 
 <!-- Modal popup window start -->
     <div id="Project_modal" class="JS_Project_modal">
@@ -178,6 +183,13 @@
         <div id="pageBdy">
 
             <div id="topBar">
+
+             <!-- PROJECT HOME BUTTON -->
+                <div id="prodHome">
+                   
+                    
+                </div>
+         <!-- PROJECT HOME BUTTON -->
             
                 <div id="centerTitle">
                     <p><?php printf( get_bloginfo ( 'name' ) ); ?></p>
@@ -274,6 +286,30 @@
 
        <!-- RIGHT SIDE BAR -->
         <div id="PicBar">
+
+             <!-- USER BUTTON -->
+            <div class="userBtn">
+                <input type="image" id="js-userBtn" src="<?php echo get_template_directory_uri(); ?>/Images/svg/UserICN.svg" alt="Submit">
+                <div class="userBtn_tip">
+                <input type="image" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ToolTipR.svg" alt="User Settings">
+                    <p>User Settings</p>
+                </div>
+             </div>
+             <!--USERT BUTTON -->
+
+               <!-- USER TAB -->
+               <div class="JS_userTab">
+                    
+                   <div id="userTabCLS">
+                       <p>Close</p>
+                   </div>
+
+
+
+                </div>
+                <!-- USER TAB -->
+
+           
         
     
         </div>

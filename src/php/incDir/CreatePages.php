@@ -55,25 +55,20 @@ function CreatePage(){
             'title' => $post_title,
             'child' => array(
                     'script' => array(
-                                    'Pname'      => $post_title.'_Script',
+                                    'Pname'      => 'Script',
+                                    'Ptitle'      =>$post_title.'_Script',
                                     'Ptemplate'  => 'page_Full_Script.php'
                                     ),
                     'assets' => array(
-                                    'Pname'     => $post_title.'_Assets',
+                                    'Pname'     => 'Assets',
+                                    'Ptitle'      =>$post_title.'_Assets',
                                     'Ptemplate' => 'page_Full_Assets.php'
                     ),
                     'settings' => array(
-                        'Pname'     => $post_title.'_Settings',
+                        'Pname'     => 'Settings',
+                        'Ptitle'      =>$post_title.'_Settings',
                         'Ptemplate' => 'page_Full_Settings.php'
                      )
-                        
-
-
-               
-                //'assets' => $post_title.'_Assets',
-               // 'settings' => $post_title.'_Settings'
-               // 'page1-3' => 'Page 1.3',
-               // 'page1-4' => 'Page 1.4'
             )
         )
       
@@ -104,7 +99,7 @@ function CreatePage(){
                 $child_id = get_page_by_title( $value );
                 $child_page = array(
                     'post_name'         => $value['Pname'],
-                    'post_title'        => $value['Pname'],
+                    'post_title'        => $value['Ptitle'],
                     'post_parent'       => $id,
                     'page_template'     => $value['Ptemplate'],
                 );

@@ -1,0 +1,115 @@
+//Project Home Button
+#prodHome{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left:0.7rem;
+    top: 8px;
+}
+//Project Button
+    .ScriptBtn{
+        position: relative;
+        width: 60px;
+        height: 60px;
+        left:0.7rem;
+        top: 10vh;
+    }
+
+    .ScriptBtn_tip{
+        //background-color: $SideBar_Color;
+        color: #B3B3B3;
+        left: 4rem;
+        position: relative;
+        text-align: center;
+        top: -70px;
+        height: 0px;
+        width: 10rem;
+        visibility: hidden;
+        transition-property:visibility;
+        transition-duration: 0.2s;
+        transition-delay: 1s;
+
+    
+    }
+    .ScriptBtn:hover .ScriptBtn_tip{
+        visibility: visible;
+
+    
+    }
+    .ScriptBtn_tip p{
+        position: relative;
+        top: -55px;
+
+    }
+//Media Button
+    .mediaBtn{
+        position: relative;
+        padding-top: 40%;
+        width: 60px;
+        height: 60px;
+        left:0.7rem;
+        top: 15vh;
+    }
+
+    .mediaBtn_tip{
+        //background-color: $SideBar_Color;
+        color: #B3B3B3;
+        left: 4rem;
+        position: relative;
+        text-align: center;
+        top: -70px;
+        height: 0px;
+        width: 10rem;
+        visibility: hidden;
+        transition-property:visibility;
+        transition-duration: 0.2s;
+        transition-delay: 1s;
+
+
+    }
+    .mediaBtn:hover .mediaBtn_tip{
+        visibility: visible;
+
+
+    }
+    .mediaBtn_tip p{
+        position: relative;
+        top: -55px;
+
+    }
+
+// Settings Button
+    .settingsBtn{
+        position: relative;
+        width: 3.5rem;
+        left:0.75rem;
+        top: 80vh;
+        
+    }
+    .settingsBtn_tip{
+        background-color: $SideBar_Color;
+        color: #B3B3B3;
+        left: 4rem;
+        position: relative;
+        text-align: center;
+        top: -70px;
+        height: 0px;
+        width: 10rem;
+        visibility: hidden;
+        transition-property:visibility;
+        transition-duration: 0.2s;
+        transition-delay: 1s;
+
+
+    }
+    .settingsBtn:hover .settingsBtn_tip{
+        visibility: visible;
+
+
+    }
+    .settingsBtn_tip p{
+        position: relative;
+        top: -55px;
+
+    }
+    

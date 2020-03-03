@@ -37,39 +37,54 @@
         <!-- SIDE BAR -->
 
 
-            <!-- PROJECT BUTTON -->
-            <div class="projectBtn">
-                <input type="image" id="js-ProjectBtn" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ProjectIcon.svg" alt="Submit">
-                <div class="projectBtn_tip">
-                <input type="image" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ToolTip.svg" alt="Create Project">
-                    <p>Creat New Project</p>
+          <!-- SCRIPT BUTTON -->
+          <div class="ScriptBtn">
+          <a href="<?php echo get_permalink( $post->post_parent ); ?>/script">
+                <input type="image" id="js-ProjectBtn" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ScriptICN.svg" alt="Submit">
+            </a>
+                <div class="ScriptBtn_tip">
+                <input type="image" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ToolTip.svg" alt="Create Script">
+                    <p>Script Writer</p>
                 </div>
              </div>
-             <!-- PROJECT BUTTON -->
+             <!-- SCRIPT BUTTON -->
 
               <!-- MEDIA BUTTON -->
             <div class="mediaBtn">
-                <input type="image" id="js-mediaBtn" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ProjectIcon.svg" alt="Submit">
+            <a href="<?php echo get_permalink( $post->post_parent ); ?>/assets" >
+                <input type="image" id="js-mediaBtn" src="<?php echo get_template_directory_uri(); ?>/Images/svg/AssetsICN.svg" alt="Submit">
+            </a>
                 <div class="mediaBtn_tip">
-                <input type="image" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ToolTip.svg" alt="Create Project">
-                    <p>Creat New Project</p>
+                <input type="image" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ToolTip.svg" alt="Explore Assets">
+                    <p>Explore Assets</p>
                 </div>
              </div>
-             <!-- PROJECT BUTTON -->
+             <!-- MEDIA BUTTON -->
 
-            <!-- SETTINGS BUTTON -->
-            <div class="settingsBtn">
-            <a href="settings">
-                     <img src="<?php echo get_template_directory_uri(); ?>/Images/svg/SettingsICN.svg   "/>
-                </a>
+             <!-- SETTINGS BUTTON -->
+          <div class="settingsBtn">
+         <a href="<?php echo get_permalink( $post->post_parent ); ?>/settings">
+                <input type="image" src="<?php echo get_template_directory_uri(); ?>/Images/svg/SettingsICN.svg" alt="Submit">
+        </a>
+                <div class="settingsBtn_tip">
+                <input type="image" src="<?php echo get_template_directory_uri(); ?>/Images/svg/ToolTip.svg" alt="Settings">
+                    <p>Settings</p>
+                </div>
              </div>
-            <!-- SETTINGS BUTTON -->
+             <!-- SETTINGS BUTTON -->
            
         </div>
         <!-- MAIN CENTER WINDOW -->
         <div id="pageBdy">
 
             <div id="topBar">
+
+        <!-- PROJECT HOME BUTTON -->
+                <div id="prodHome">
+                    
+                    
+                </div>
+         <!-- PROJECT HOME BUTTON -->
             
                 <div id="centerTitle">
                     <p><?php printf( wp_title('') ); ?></p>
@@ -102,6 +117,7 @@
 
        <!-- RIGHT SIDE BAR -->
         <div id="PicBar">
+        
         
     
         </div>

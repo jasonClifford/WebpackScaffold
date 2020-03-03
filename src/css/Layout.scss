@@ -205,56 +205,79 @@
                 top: -55px;
 
             }
-//Media Button
-            .mediaBtn{
-                position: relative;
-                padding-top: 40%;
-                width: 60px;
-                height: 60px;
-                left:0.7rem;
-                top: 10vh;
-            }
-
-            .mediaBtn_tip{
-                //background-color: $SideBar_Color;
-                color: #B3B3B3;
-                left: 4rem;
-                position: relative;
-                text-align: center;
-                top: -70px;
-                width: 10rem;
-                visibility: hidden;
-                transition-property:visibility;
-                transition-duration: 0.2s;
-                transition-delay: 1s;
-
-            
-            }
-            .mediaBtn:hover .projectBtn_tip{
-                visibility: visible;
-
-            
-            }
-            .mediaBtn_tip p{
-                position: relative;
-                top: -55px;
-
-            }
-
-// Settings Button
-            .settingsBtn{
-                position: relative;
-                width: 3.5rem;
-                left:0.75rem;
-                top: 80vh;
-            }
         }
+
         #PicBar{
+            //width: 100px;
             background-color: $SideBar_Color;
-           // width: 3rem;
-           // height: 100%;
+
+            //userBtn Button
+                .userBtn{
+                    position: relative;
+                    width: 60px;
+                    height: 60px;
+                    left:0.6rem;
+                    top: 15vh;
+                }
+
+                .userBtn_tip{
+                    //background-color: $SideBar_Color;
+                    color: #B3B3B3;
+                    right: 10.3rem;
+                    position: relative;
+                    text-align: center;
+                    top: -70px;
+                    width: 10rem;
+                    visibility: hidden;
+                    transition-property:visibility;
+                    transition-duration: 0.2s;
+                    transition-delay: 1s;
+
+                
+                }
+                .userBtn:hover .userBtn_tip{
+                    visibility: visible;
+
+                
+                }
+                .userBtn_tip p{
+                    position: relative;
+                    top: -55px;
+
+                }//userBtn Button
+
+                //USER TAB
+                .JS_userTab{
+                    background-color: $SideBar_Color;
+                    visibility: hidden;
+                    opacity: 0%;
+                    position: fixed;
+                    top: 0px;
+                    right: 1px;
+                    height: 100vh;
+                    width: 20vw;
+                    z-index: 1;
+                    transition:opacity 0.3s, visibility 0.3s;
+
+                    &.JS_userTab_OPN{
+                        visibility: visible;
+                        opacity: 100%;
+                    }
+                    #userTabCLS{
+                        cursor: pointer;
+                        color: $TopBar_Color_Txt;
+
+                    }
+
+
+                }//USER TAB
+
+            
+
                        
         }
+
+
         #pageBdy{
             
           //width: 3rem;
@@ -264,10 +287,12 @@
             #topBar{
             background-color: $TopBar_Color;
                display: grid;
-               grid-template-columns: auto 15rem;
+               grid-template-columns: 5% 70% 25%;
                position: relative;
                width: 100%;
                height: 3rem;
+
+             
                
 
                 #centerTitle{

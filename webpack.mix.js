@@ -15,6 +15,7 @@ const mix = require('laravel-mix');
 mix.js([
     'src/js/appIN.js',
     'src/js/ProjectModle.js',
+    'src/js/UserModle.js',
     'src/js/CreatePage.js',
     'src/js/PosterModle.js',
     'src/js/Script_Modle.js',
